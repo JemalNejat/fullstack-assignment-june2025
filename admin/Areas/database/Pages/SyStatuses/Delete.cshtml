@@ -1,0 +1,48 @@
+﻿@page
+@model ADMIN.ITEGAMAX._4._0.Areas.database.Pages.SyStatuses.DeleteModel
+@{
+    ViewData["Title"] = "sy_statuses";
+}
+
+<!-- Page Header -->
+<div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+    <div>
+        <h4 class="mb-0">Datatabell: @ViewData["Title"]</h4>
+        <p class="mb-0 text-muted">Den här sidan används för att hantera systemstatusar.</p>
+    </div>
+    <p>
+        <a asp-page="index" class="btn btn-success waves-effect waves-light">Tillbaka</a>
+    </p>
+</div>
+
+<div class="col-xl-3 col-lg-7 w-100">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex flex-column">
+                <h5 class="mb-0 main-content-label">Radera Status</h5>
+                <hr class="mt-2 mb-4" />
+                <p>
+                    Är du säker på att du vill radera denna status?
+                    <strong class="text-dark">@Model.SyStatus.Status</strong>
+                </p>
+            </div>
+            <form class="form-horizontal" method="post">
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <input type="hidden" asp-for="SyStatus.id" />
+                    </div>
+                </div>
+
+                <div class="card-footer d-flex justify-content-start pb-0">
+                        <a asp-page="Index" class="btn btn-secondary me-2">Avbryt</a> 
+                        <button type="submit" class="btn btn-danger">Ja, radera</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

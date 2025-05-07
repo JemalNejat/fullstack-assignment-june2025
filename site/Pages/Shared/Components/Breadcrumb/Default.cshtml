@@ -1,0 +1,36 @@
+﻿@{
+
+    string pagetopbanner;
+    string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+    if (!String.IsNullOrEmpty(Model?.pagetopbannerpic))
+    {
+        pagetopbanner = imagespagedir + "/" + Model?.pageurlid.Replace("/", "") + "/" + Model?.pagetopbannerpic!;
+    }
+    else
+    {
+        pagetopbanner = "../assets/img/breadcrumb/01.jpg";
+    }
+
+}
+<!-- breadcrumb -->
+<div class="site-breadcrumb" style="background: url('@pagetopbanner')">
+    <div class="container">
+        @if (!String.IsNullOrEmpty(Model?.pagetitle))
+        {
+            <h2 class="breadcrumb-title">@Model?.pagetitle</h2>
+        }
+        @if (!String.IsNullOrEmpty(Model?.pagesubtitle))
+        {
+            <h2 class="breadcrumb-subtitle">@Model?.pagesubtitle</h2>
+        }
+        <ul class="breadcrumb-menu">
+            <li><a href="~/">Hem</a></li>
+             @if (!String.IsNullOrEmpty(Model?.pagetitle))
+        {
+                <li class="active">@Model?.pagetitle</li>
+        }
+        </ul>
+    </div>
+</div>
+<!-- breadcrumb end -->

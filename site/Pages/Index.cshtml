@@ -1,0 +1,9 @@
+﻿@page
+@using Microsoft.AspNetCore.Localization
+@model IndexModel
+@{
+    Layout = "_Layout-index";
+}
+@await Component.InvokeAsync("HeroSlider", new { pageare = CLCustAppsettings.SERVICE_START_PAGEID })
+@await Component.InvokeAsync("ProductListHero", new { pageare = CLCustAppsettings.PRODUCT_START_PAGEID }))
+@await Component.InvokeAsync("ServiceSlide", new { pageare = CLCustAppsettings.SERVICE_START_PAGEID }))

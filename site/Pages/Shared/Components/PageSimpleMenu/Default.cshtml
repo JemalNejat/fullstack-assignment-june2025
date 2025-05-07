@@ -1,0 +1,38 @@
+﻿@{
+    List<modMenuItem> listmenuitems_under = Model;
+    string urlreqpath = Context.Request.Path!.ToString()!;
+    string menutitle = Resources.mainstrings.strrelatepages.ToUpper();
+
+
+    switch (urlreqpath)
+    {
+        case var path when path.StartsWith("/jobb"):
+        case var path2 when path2.StartsWith("/foretag/jobba-hos-oss"):
+            menutitle = "Vi söker:";
+            break;
+        default:
+            menutitle = Resources.mainstrings.strrelatepages.ToUpper();
+            break;
+    }
+
+
+    if (listmenuitems_under != null)
+    {
+
+        <div class="widget category">
+            <h4 class="widget-title">@menutitle.ToUpper()</h4>
+            <div class="category-list">
+                @foreach (var item in listmenuitems_under)
+                {
+                    if (urlreqpath != item.pageurlid)
+                    {
+                        if (item.pagetype != 1)
+                        {
+                            <a href="..@item.pageurlid"><i class="far fa-long-arrow-right"></i>@item.pagetitle</a>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    }
+}

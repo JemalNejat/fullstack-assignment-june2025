@@ -1,0 +1,130 @@
+﻿@page "{id:int}"
+@model ADMIN.ITEGAMAX._4._0.Areas.database.Pages.SiteNewsletterSubs.EditModel
+@{
+    ViewData["Title"] = "st_newsletter_subscribers";
+}
+<div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+    <div>
+        <h4 class="mb-0">Datatabell: @ViewData["Title"]</h4>
+        <p class="mb-0 text-muted">Den här sidan används för att redigera en tidning.</p>
+    </div>
+    <p>
+        <a asp-page="index" class="btn btn-success waves-effect waves-light">Tillbaka</a>
+    </p>
+</div>
+
+<div class="col-xl-3 col-lg-7 w-100">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex flex-column">
+                <h4 class="mb-3 main-content-label fw-bold">Redigera Newsletter Subscriber</h4>
+                <hr class="mt-1 mb-2" />
+            </div>
+            <form class="form-horizontal" method="post">
+
+                <!-- Hidden Fields -->
+                <input asp-for="stnewslettersubscriber!.StNlSubscribersId" type="hidden" />
+                <input asp-for="stnewslettersubscriber!.StNlSubscribersCreateddate" type="hidden" />
+                <input asp-for="stnewslettersubscriber!.StNlSubscribersUpdateddate" type="hidden" value="@DateTime.Now" />
+                <input asp-for="stnewslettersubscriber!.StNlSubscribersOpoutDate" type="hidden" />
+
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Name:*</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" asp-for="stnewslettersubscriber!.StNlSubscribersName" class="form-control">
+                            <span asp-validation-for="stnewslettersubscriber!.StNlSubscribersName" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Email:*</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" asp-for="stnewslettersubscriber!.StNlSubscribersEmail" class="form-control">
+                            <span asp-validation-for="stnewslettersubscriber!.StNlSubscribersEmail" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Phone:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" asp-for="stnewslettersubscriber!.StNlSubscribersPhone" class="form-control" max="15">
+                            <span asp-validation-for="stnewslettersubscriber!.StNlSubscribersPhone" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Area:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="number" asp-for="stnewslettersubscriber!.StNlSubscribersStarea" class="form-control" required min="1" max="20">
+                            <span asp-validation-for="stnewslettersubscriber!.StNlSubscribersStarea" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Company Type:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="number" asp-for="stnewslettersubscriber!.StNlSubscribersComType" class="form-control" required min="1" max="20">
+                            <span asp-validation-for="stnewslettersubscriber!.StNlSubscribersComType" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">OpOut:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="number" asp-for="stnewslettersubscriber!.StNlSubscribersOpout" class="form-control" required min="0" max="2">
+                            <span asp-validation-for="stnewslettersubscriber!.StNlSubscribersOpout" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Status:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <select class="form-control" asp-for="stnewslettersubscriber!.StNlSubscribersStatus" required>
+                                <option value="1">Inaktiv</option>
+                                <option value="2">Dold</option>
+                                <option value="3">Aktiv</option>
+                            </select>
+                            <span asp-validation-for="stnewslettersubscriber!.StNlSubscribersStatus" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer pb-0">
+                    <input type="submit" class="btn btn-primary waves-effect waves-light" value="Edit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

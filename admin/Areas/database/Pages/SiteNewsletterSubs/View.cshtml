@@ -1,0 +1,150 @@
+﻿@page
+@model ADMIN.ITEGAMAX._4._0.Areas.database.Pages.SiteNewsletterSubs.ViewModel
+@{
+    ViewData["Title"] = "Visa Site Newsletters";
+}
+<div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+    <div>
+        <h4 class="mb-0">Datatabell: @ViewData["Title"]</h4>
+        <p class="mb-0 text-muted">Den här sidan visar detaljer för en Site Newsletter Subscriber.</p>
+    </div>
+    <p>
+        <a asp-page="index" class="btn btn-success waves-effect waves-light">Tillbaka</a>
+    </p>
+</div>
+
+
+
+<div class="col-xl-3 col-lg-7 w-100">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex flex-column">
+                <h4 class="mb-3 main-content-label fw-bold">Visa Site Newsletter Subscriber</h4>
+                <hr class="mt-1 mb-2" />
+            </div>
+
+        
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Subscriber ID:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersId" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Name:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersName" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Email:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersEmail" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Phone:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersPhone" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Area:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersStarea" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Company Type:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersComType" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">OpOut:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersOpout" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Status:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersStatus" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Created Date:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersCreateddate" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Updated Date:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersUpdateddate" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">OpOut Date:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stnewslettersubscriber!.StNlSubscribersOpoutDate" disabled />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

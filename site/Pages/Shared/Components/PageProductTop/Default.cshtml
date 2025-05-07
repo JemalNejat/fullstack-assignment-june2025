@@ -1,0 +1,14 @@
+﻿<!-- product area -->
+<div class="about-area py-120">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                @await Component.InvokeAsync("ProductFeatures", new { productgroupid = CLCustAppsettings.CORE_PRODUCT_GROUP })
+            </div>
+            <div class="col-lg-7">
+                @await Component.InvokeAsync("ProductUnderPage")
+            </div>
+        </div>
+    </div>
+</div>
+<!-- product area end -->

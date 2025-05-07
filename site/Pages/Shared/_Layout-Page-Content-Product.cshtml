@@ -1,0 +1,54 @@
+﻿@{
+    if (Context.Items["PageContent"] != null)
+    {
+
+<!DOCTYPE html>
+<html lang="sv">
+        <head>
+            <!-- meta tags -->
+            <partial name="~/Pages/Shared/_PartialPageMetaData.cshtml" />
+            <!-- css -->
+            <partial name="~/Pages/Shared/_PartialPageHeaderCss.cshtml" />
+        </head>
+        <body class="home-5">
+            <!-- preloader -->
+            <div class="preloader">
+                <div class="loader-ripple">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <!-- preloader end -->
+            <!-- header area -->
+            <header class="header"> 
+                <!-- top header -->
+                <partial name="~/Pages/Shared/_PartialTopHeader.cshtml" />
+                <!-- top header end -->
+                <!-- navbar -->
+                <partial name="~/Pages/Shared/_PartialNavbar.cshtml" />
+                <!-- navbar end-->
+            </header>
+            <!-- header area end -->
+            <!-- popup search -->
+            <partial name="~/Pages/Shared/_PartialSearchPopup.cshtml" />
+            <!-- popup search end -->
+            <!-- sidebar-popup -->
+            @await Component.InvokeAsync("PopupSidebar", new { pageid = 131 })
+            <!-- sidebar-popup end -->
+            <main class="main">
+                @RenderBody()
+            </main>
+            <partial name="~/Pages/Shared/_PartialFooterArea.cshtml" />
+            <!-- footer area end -->
+            <!-- scroll-top -->
+            <partial name="~/Pages/Shared/_PartialScrollToTop.cshtml" />
+            <!-- scroll-top end -->
+            <!-- js -->
+            <partial name="~/Pages/Shared/_PartialFooterJs.cshtml" />
+        </body>
+        </html>
+    }else
+    {
+        IgnoreBody();
+    }
+}

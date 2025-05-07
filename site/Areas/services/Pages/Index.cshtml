@@ -1,0 +1,44 @@
+﻿@page "{pagetitle=index}"
+@using SITE.ITEGAMAX._4._0._2
+@using SITE.ITEGAMAX._4._0._2.App_Code;
+@using SITE.ITEGAMAX._4._0._2.Models;
+@model SITE.ITEGAMAX._4._0._2.Areas.services.Pages.IndexModel
+@{
+
+    modSitePage? pageItem = null;
+    if (HttpContext.Items["PageContent"] != null)
+    {
+        pageItem = (modSitePage)HttpContext.Items["PageContent"]!;
+    }
+    string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+    string areaname = Request.Path.ToString().Split("/")[1];
+
+    @await Component.InvokeAsync("Breadcrumb", new { _controlpageItem = pageItem })
+}
+
+@{
+    if (("/" + areaname) == pageItem!.pageurlid)
+    {
+        <div class="service-single py-120">
+            <div class="container">
+                <div class="service-single-wrapper">
+                    <div class="row">
+                        @await Component.InvokeAsync("ServicesStart", new { pageitem = pageItem })
+                        @await Component.InvokeAsync("ServicesList", new { pageare = CLCustAppsettings.SERVICE_START_PAGEID })
+                    </div>
+                </div>
+            </div>
+        </div>
+        @await Component.InvokeAsync("FormGetYourService", new { pageid = CLCustAppsettings.FORM_SERVICES_PAGEID })
+    }
+    else
+    {
+        <!-- Service Item -->
+        @await Component.InvokeAsync("ServiceItem", new { pageitem = pageItem })
+        @await Component.InvokeAsync("FormGetYourService", new { pageid = CLCustAppsettings.FORM_SERVICES_PAGEID })
+        <!-- Service Item end -->
+
+    }
+
+}

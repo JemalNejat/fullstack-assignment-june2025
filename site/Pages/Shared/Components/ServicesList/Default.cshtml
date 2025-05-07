@@ -1,0 +1,65 @@
+﻿@{
+
+
+    if (Model != null)
+    {
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+        List<modSitePage> sitepages = Model;
+
+ <!-- service-area -->
+        <div class="service-area2 bg py-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline light"><i class="fas fa-percent"></i> Våra Tjänster</span>
+                            <h2 class="site-title">Vad vi erbjuder till <span>våra kunder</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    @{
+                        foreach (var item in sitepages)
+                        {
+                            <div class="col-md-6 col-lg-4">
+                                <div class="service-item wow fadeInUp" data-wow-delay=".25s">
+                                    <div class="service-content">
+                                        <div class="service-icon">
+                                            <a href="..@item.pageurlid">
+                                            <img src="assets/img/icon/investment.svg" alt="@item.pagetitle" title="@item.pagetitle">
+                                            </a>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3 class="service-title">
+                                                <a href="..@item.pageurlid">@item.pagetitle</a>
+                                            </h3>
+                                            <p class="service-text">
+                                                @item.pagesubtitle
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="service-img">
+                                        <a href="..@item.pageurlid">
+                                            @{
+                                                if ((item.pagesmallbannerpic != null) && (!String.IsNullOrEmpty(item.pagesmallbannerpic)))
+                                                {
+                                                    <img src="@(imagespagedir + "/" +  item.pageurlid!.Replace("/","") + "/" + item.pagesmallbannerpic)" alt="@item.pagetitle" title="@item.pagetitle">
+                                                }
+                                                else
+                                                {
+                                                    <img src="~/assets/img/service/01.jpg" alt="@item.pagetitle">
+                                                }
+                                            }
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    <!-- service-area -->
+    }
+}

@@ -1,0 +1,286 @@
+﻿@page
+@model ADMIN.ITEGAMAX._4._0.Areas.database.Pages.SiteMetatags.NewModel
+@{
+    ViewData["Title"] = "st_metatag";
+}
+<div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+    <div>
+        <h4 class="mb-0">Datatabell: @ViewData["Title"]</h4>
+        <p class="mb-0 text-muted">Den här sidan används för att skapa en ny metatag för en webbplats.</p>
+    </div>
+    <p>
+        <a asp-page="index" class="btn btn-success waves-effect waves-light">Tillbaka</a>
+    </p>
+</div>
+
+<div class="col-xl-3 col-lg-7 w-100">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex flex-column">
+                <h5 class="mb-0 main-content-label">Skapa Metatag</h5>
+                <hr class="mt-2 mb-4" />
+            </div>
+            <form class="form-horizontal" method="post">
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Webbplats Typ: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="number" name="StMetatagSitetype" class="form-control" required min="1" max="500" placeholder="Ange webbplats typ">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Titel:* </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="Metatitle" class="form-control" required min="5" max="255" placeholder="Ange titel">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Beskrivning: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea name="Metadescription" class="form-control" rows="5" placeholder="Ange beskrivning"></textarea>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Nyckelord: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea name="Metakeywords" class="form-control" rows="5" placeholder="Ange nyckelord"></textarea>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Författare: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="Metaauthor" class="form-control" min="5" max="255" placeholder="Ange författare">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Referenslänk: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="Metalinkhref" class="form-control" min="5" max="255" placeholder="Ange referenslänk">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Kanonisk URL: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="Metalinkrelcanonical" class="form-control" min="5" max="255" placeholder="Ange kanonisk URL">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Metatag-Robot: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="Metanamerobots" class="form-control" min="5" max="255" placeholder="Ange Metatag-Robot">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="col-md-12">
+                        <hr />
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">og:Typ: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertyogType" class="form-control" min="5" max="255" placeholder="Ange og:typ">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">og:Titel: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertyogTitle" class="form-control" min="5" max="255" placeholder="Ange og:titel">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">og:Beskrivning: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea name="MetapropertyogDescription" class="form-control" rows="5" placeholder="Ange og:beskrivning"></textarea>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">og:Bild: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertyogImage" class="form-control" min="5" max="255" placeholder="Ange og:bild">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">og:URL: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertyogUrl" class="form-control" min="5" max="255" placeholder="Ange og:url">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">og:Sitename: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertyogSiteName" class="form-control" min="5" max="255" placeholder="Ange og:sitename">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">og:Locale: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertyogLocale" class="form-control" min="5" max="255" placeholder="Ange og:locale">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="col-md-12">
+                        <hr />
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Twitter:Titel: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertytwitterTitle" class="form-control" min="5" max="255" placeholder="Ange twitter:titel">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Twitter:Beskrivning: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea name="MetapropertytwitterDescription" class="form-control" rows="5" placeholder="Ange twitter:beskrivning"></textarea>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Twitter:Bild: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertytwitterImage" class="form-control" min="5" max="255" placeholder="Ange twitter:bild">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Twitter:Site: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertytwitterSite" class="form-control" min="5" max="255" placeholder="Ange twitter:site">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Twitter:Creator: </label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" name="MetapropertytwitterCreator" class="form-control" min="5" max="255" placeholder="Ange twitter:creator">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <input name="MetapropCreateddate" type="hidden" value="@DateTime.Now" />
+                <input name="MetapropUpdateddate" type="hidden" value="@DateTime.Now" />
+                <input name="Viewcount" type="hidden" value="0" />
+
+                <div class="card-footer pb-0">
+                    <input type="submit" class="btn btn-primary waves-effect waves-light" value="Lägg till" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+﻿@{
+    if (Model != null)
+    {
+        modPageFAQ modPageFAQ = Model;
+
+        <!-- faq area -->
+        <div class="faq-area py-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        @{
+                            if (modPageFAQ.SitePage != null)
+                            {
+                                <div class="faq-right wow fadeInUp" data-wow-delay=".25s">
+                                    <div class="site-heading mb-3">
+                                        <span class="site-title-tagline"><i class="fas fa-percent"></i> Faq</span>
+                                        @{
+                                            if (modPageFAQ.SitePage.pagetitle != null)
+                                            {
+                                                <h2 class="site-title my-3">@Html.Raw(modPageFAQ.SitePage.pagetitle.Replace("vanliga", "<span>vanliga</span>"))</h2>
+                                            }
+                                        }
+                                    </div>
+
+                                    @{
+                                        if (modPageFAQ.SitePage.pagesubtitle != null)
+                                        {
+                                            <p class="mb-3">
+                                                <h5>@modPageFAQ.SitePage.pagesubtitle</h5>
+                                            </p>
+                                            <br />
+                                        }
+                                    }
+                                    @{
+                                        if (modPageFAQ.SitePage.pageshortdescription != null)
+                                        {
+                                            <p class="mb-4">@modPageFAQ.SitePage.pageshortdescription</p>
+                                        }
+                                    }
+                                    <a href="/support/kontakt" class="theme-btn mt-2">Har du några frågor?</a>
+                                </div>
+                            }
+                        }
+                    </div>
+                    @{
+                        if (modPageFAQ.SiteFAQ != null)
+                        {
+                            List<modFAQ> FAQItems = modPageFAQ.SiteFAQ;
+                            var listitemcateg = FAQItems.AsParallel().DistinctBy(i => i.st_faq_category_name).AsParallel().DistinctBy(i => i.st_faq_categoryid).ToList();
+
+                            foreach (var itemCatg in listitemcateg)
+                            {
+                                <div class="col-lg-6">
+                                    <h3>@itemCatg.st_faq_category_name</h3>
+                                    <br />
+                                    <div class="accordion wow fadeInRight" data-wow-delay=".25s" id="accordion-@itemCatg.st_faq_categoryid">
+                                        @{
+                                            foreach (var item in FAQItems)
+                                            {
+                                                if (item.st_faq_categoryid == itemCatg.st_faq_categoryid)
+                                                {
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="heading-@item.st_faq_ques_ans_id">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapse-@item.st_faq_ques_ans_id" aria-expanded="false" aria-controls="collapse-@item.st_faq_ques_ans_id">
+                                                                <span><i class="far fa-question"></i></span> @item.st_faq_question
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-@item.st_faq_ques_ans_id" class="accordion-collapse collapse" aria-labelledby="heading-@item.st_faq_ques_ans_id"
+                                                             data-bs-parent="#accordion-@item.st_faq_categoryid">
+                                                            <div class="accordion-body">
+                                                                @Html.Raw(item.st_faq_answer)
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- faq area end -->
+    }
+}

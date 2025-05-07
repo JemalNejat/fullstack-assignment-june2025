@@ -1,0 +1,77 @@
+﻿@{
+    if (Model != null)
+    {
+        List<modSiteMap> sitemappageslist = Model;
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+        var listitemcateg = sitemappageslist.AsParallel().DistinctBy(i => i.pageareaname).AsParallel().DistinctBy(i => i.pagemenuarea).ToList();
+
+        <!-- site map-->
+        <div class="case-study py-100">
+            <div class="container">
+                <div class="row align-items-center wow fadeInDown" data-wow-delay=".25s">
+                    <div class="col-lg-12">
+                        <div class="site-heading">
+                            <span class="site-title-tagline"><i class="fas fa-percent"></i> @Resources.mainstrings.strsitemap</span>
+                            <h2 class="site-title">@Resources.mainstrings.strthecontentofourwebsite</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center wow fadeInDown" data-wow-delay=".25s">
+                    <div class="col-lg-12 pb-30">
+                        <div class="filter-control">
+                            <ul class="filter-btn" style="flex-wrap: wrap;">
+                                <li class="active" data-filter="*">All</li>
+                                @{
+                                    foreach (var itemCatg in listitemcateg)
+                                    {
+                                        if (!string.IsNullOrEmpty(itemCatg.pageareaname))
+                                        {
+                                            <li data-filter=".@itemCatg.pageareaname!.Replace(" ", "-")">@itemCatg.pageareaname</li>
+                                        }
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 filter-box popup-gallery wow fadeInUp" data-wow-delay=".25s">
+                    @{
+                        foreach (var item in sitemappageslist)
+                        {
+                            <div class="col-md-6 col-lg-4 filter-item @item.pageareaname!.Replace(" ","-")">
+                                <div class="case-item">
+                                    <div class="case-img">
+                                        <a class="case-link" href="@item.pageurlid" title="@item.pagetitle">
+                                            <i class="fal fa-plus"></i>
+                                        </a>
+                                        @{
+                                            if ((item.pagemediumbannerpic != null) && (!String.IsNullOrEmpty(item.pagemediumbannerpic)))
+                                            {
+                                                <img src="@(imagespagedir + "/" +  item.pageurlid!.Replace("/","") + "/" + item.pagemediumbannerpic)" alt="@item.pagetitle" title="@item.pagetitle">
+                                            }
+                                            else
+                                            {
+                                                <img src="~/assets/img/case/01.jpg" alt="@item.pagetitle">
+                                            }
+                                        }
+                                        <div class="case-btn">
+                                            <a href="@item.pageurlid" title="@item.pagetitle"><i class="far fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="case-content">
+                                        <a href="@item.pageareapath" title="@item.pageareaname">
+                                            <small>@item.pageareaname</small>
+                                        </a>
+                                        <h4><a href="@item.pageurlid" title="@item.pagetitle">@item.pagetitle</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- site map end -->
+    }
+}

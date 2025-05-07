@@ -1,0 +1,150 @@
+﻿@page "{id:int}"
+@model ADMIN.ITEGAMAX._4._0.Areas.database.Pages.SiteMetatags.EditModel
+@{
+    ViewData["Title"] = "st_metatags";
+}
+<div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+    <div>
+        <h4 class="mb-0">Datatabell: @ViewData["Title"]</h4>
+        <p class="mb-0 text-muted">Den här sidan används för att redigera en Site Metatag.</p>
+    </div>
+    <p>
+        <a asp-page="index" class="btn btn-success waves-effect waves-light">Tillbaka</a>
+    </p>
+</div>
+
+<div class="col-xl-3 col-lg-7 w-100">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex flex-column">
+                <h4 class="mb-3 main-content-label fw-bold">Redigera Site Metatag</h4>
+                <hr class="mt-1 mb-2" />
+            </div>
+            <form class="form-horizontal" method="post">
+
+                <!-- Metatag ID (Hidden) -->
+                <input type="hidden" asp-for="stmetatag!.StMetatagid" />
+
+                <!-- Metatag Title -->
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Title:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="stmetatag!.Metatitle" required placeholder="Enter title">
+                            <span asp-validation-for="stmetatag!.Metatitle" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Site Type -->
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Site Type:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="number" class="form-control" asp-for="stmetatag!.StMetatagSitetype" required min="1" max="5" placeholder="Enter site type">
+                            <span asp-validation-for="stmetatag!.StMetatagSitetype" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Description:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea class="form-control" asp-for="stmetatag!.Metadescription" rows="5" placeholder="Enter description"></textarea>
+                            <span asp-validation-for="stmetatag!.Metadescription" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keywords -->
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Keywords:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea class="form-control" asp-for="stmetatag!.Metakeywords" rows="5" placeholder="Enter keywords"></textarea>
+                            <span asp-validation-for="stmetatag!.Metakeywords" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author -->
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Author:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="stmetatag!.Metaauthor" placeholder="Enter author">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ref Link -->
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Ref Link:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="stmetatag!.Metalinkhref" placeholder="Enter reference link">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Canonical URL -->
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Canonical URL:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="stmetatag!.Metalinkrelcanonical" placeholder="Enter canonical URL">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status -->
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Status:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <select class="form-control" asp-for="stmetatag!.MetapropStatus" required>
+                                <option value="1">Inactive</option>
+                                <option value="2">Hidden</option>
+                                <option value="3">Active</option>
+                            </select>
+                            <span asp-validation-for="stmetatag!.MetapropStatus" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden Fields -->
+                <input type="hidden" asp-for="stmetatag!.MetapropCreateddate" />
+                <input type="hidden" asp-for="stmetatag!.MetapropUpdateddate" value="@DateTime.Now" />
+                <input type="hidden" asp-for="stmetatag!.Viewcount" />
+
+                <!-- Submit Button -->
+                <div class="card-footer pb-0">
+                    <input type="submit" class="btn btn-primary waves-effect waves-light" value="Redigera" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

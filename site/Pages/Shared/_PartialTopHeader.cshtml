@@ -1,0 +1,26 @@
+﻿<div class="header-top">
+    <div class="container">
+        <div class="header-top-wrap">
+            <div class="header-top-left">
+                <div class="header-top-contact">
+                    <ul>
+                        <li>
+                            <a href="#" onclick="javascript:CreateMail('info|se|itegamax|ITeGAMAX%20Feedback%20-%20Info|%0ADitt%20f%C3%B6r-%20efternamn%3A%20%0ADitt%20f%C3%B6retagsnamn%3A%0ADin%20e-postadress%3A%20%0ADitt%20telefonnummer%3A%20%0A-----------------------------%0AMeddelande%20till%20oss%3A%20%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A');">
+                                <i class="far fa-envelopes"></i>
+                                info<!---->@@<!---->itegamax.se
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:@CLCompanySettings.COMPANY_PHONE"><i class="far fa-phone-volume"></i> @CLCompanySettings.COMPANY_PHONE</a>
+                        </li>
+                        <li><a href="#"><i class="far fa-alarm-clock"></i> @Resources.mainstrings.strweekdays (@CLCompanySettings.COMPANY_OPENINGHOURS_WEEKDAYS)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-top-right">
+          @*    @await Component.InvokeAsync("CultureSwitcher") *@
+                @await Component.InvokeAsync("FollowUsHeader")
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+﻿@using SITE.ITEGAMAX._4._0._2;
+
+@{
+
+
+    if (Model != null)
+    {
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+        List<modSitePage> sitepages = Model;
+
+        <!-- service slide -->
+        <div class="case-study py-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="fas fa-percent"></i> Våra Tjänster</span>
+                            <h2 class="site-title">Vad vi erbjuder till våra kunder</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row popup-gallery wow fadeInUp" data-wow-delay=".25s">
+                    <div class="case-slider owl-carousel owl-theme">
+                        @{
+                            foreach (var item in sitepages)
+                            {
+                                <div class="case-item">
+                                    <div class="case-img">
+                                        <a class="case-link" href="..@item.pageurlid" title="@mainstrings.strseewhatweoffer">
+                                            <i class="fal fa-plus"></i>
+                                        </a>
+                                        @{
+                                            if ((item.pagemediumbannerpic != null) && (!String.IsNullOrEmpty(item.pagemediumbannerpic)))
+                                            {
+                                                <img class="img-fluid" src="@(imagespagedir + "/" +  item.pageurlid!.Replace("/","") + "/" + item.pagemediumbannerpic)" alt="@item.pagetitle" title="@item.pagetitle">
+                                            }
+                                            else
+                                            {
+                                                <img src="~/assets/img/case/01.jpg" alt="@item.pagetitle">
+                                            }
+                                        }
+                                        <div class="case-btn">
+                                            <a href="..@item.pageurlid" title="@mainstrings.strseewhatweoffer"><i class="far fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="case-content">
+                                        <small>Tjänst</small>
+                                        <h4><a href="..@item.pageurlid">@item.pagetitle</a></h4>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- service slide -->
+    }
+}

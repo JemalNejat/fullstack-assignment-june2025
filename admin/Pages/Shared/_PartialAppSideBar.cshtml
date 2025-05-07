@@ -1,0 +1,19 @@
+﻿<aside class="app-sidebar sticky" id="sidebar">
+    <!-- Start::main-sidebar-header -->
+    <div class="main-sidebar-header">
+        <a href="~/" class="header-logo">
+            <img src="~/assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+            <img src="~/assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+            <img src="~/assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
+            <img src="~/assets/images/brand-logos/toggle-white.png" alt="logo" class="toggle-white">
+        </a>
+    </div>
+    <!-- End::main-sidebar-header -->
+    <!-- Start::main-sidebar -->
+    <div class="main-sidebar" id="sidebar-scroll">
+        <!-- Start::nav -->
+        @await Component.InvokeAsync("AppMainMenu", new { menuarea = CLCustAppsettings.COMP_APP_COREMENU_ID, itemstatus = CLCustAppsettings.COMP_STATUS_ACTIVE_ID })
+        <!-- End::nav -->
+    </div>
+    <!-- End::main-sidebar -->
+</aside>

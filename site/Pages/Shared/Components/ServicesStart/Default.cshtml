@@ -1,0 +1,75 @@
+﻿@{
+    if (Model != null)
+    {
+        modSitePage? pagecontextdataitem = Model;
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+        <div class="choose-area py-30">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="choose-content wow fadeInUp" data-wow-delay=".25s">
+                        <div class="site-heading mb-0">
+                                <span class="site-title-tagline"><i class="fas fa-percent"></i>@pagecontextdataitem.pagesubtitle</span>
+                                <h2 class="site-title">@pagecontextdataitem.pageshortdescription</h2>
+                        </div>
+
+                            @{
+                                if (pagecontextdataitem.Articles != null)
+                                {
+                                    <div class="choose-content-wrap">
+                                        @{
+
+                                            string icons = "/site_icons/";
+   
+                                            foreach (var item in pagecontextdataitem.Articles)
+                                            {
+                                                <div class="choose-item">
+                                                    <div class="choose-item-icon">
+                                                        <img src="@Html.Raw(icons + "service_article_" + item.article_position + ".svg")" alt="@item.articletitle">
+                                                    </div>
+                                                    <div class="choose-item-info">
+                                                        <h4>@item.articletitle</h4>
+                                                        <p>@Html.Raw(item.articletext)</p>
+                                                    </div>
+                                                </div>
+                                            }
+                                        }
+
+                                    </div>
+                                }
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="choose-img wow fadeInRight" data-wow-delay=".25s">
+
+                            @{
+                                if ((pagecontextdataitem.pagesmallbannerpic != null) && (!String.IsNullOrEmpty(pagecontextdataitem.pagesmallbannerpic)))
+                                {
+                                    <img class="img-1" src="@(imagespagedir + "/" + pagecontextdataitem.pageurlid!.Replace("/","") + "/" + pagecontextdataitem.pagemediumbannerpic)" alt="@pagecontextdataitem.pagemediumbannersubtitle" title="@pagecontextdataitem.pagemediumbannersubtitle">
+                                }
+                                else
+                                {
+                                    <img class="img-1" src="~/assets/img/choose/01.jpg" alt="@pagecontextdataitem.pagetitle">
+                                }
+                            }
+
+                            @{
+                                if ((pagecontextdataitem.pagesmallbannerpic != null) && (!String.IsNullOrEmpty(pagecontextdataitem.pagesmallbannerpic)))
+                                {
+                                    <img class="img-2" src="@(imagespagedir  + "/" + pagecontextdataitem.pageurlid!.Replace("/","") + "/" + pagecontextdataitem.pagesmallbannerpic)" alt="@pagecontextdataitem.pagesmallbannertitle" title="@pagecontextdataitem.pagesmallbannertitle">
+                                }
+                                else
+                                {
+                                    <img class="img-2" src="~/assets/img/choose/02.jpg" alt="@pagecontextdataitem.pagetitle">
+                                }
+                            }
+                        <img class="img-shape" src="~/assets/img/shape/10.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+}

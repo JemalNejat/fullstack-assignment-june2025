@@ -1,0 +1,29 @@
+﻿@page "{pagetitle=index}"
+@using SITE.ITEGAMAX._4._0._2
+@using SITE.ITEGAMAX._4._0._2.Models;
+@model SITE.ITEGAMAX._4._0._2.Areas.produkter.Pages.IndexModel
+@{
+    Layout = "_Layout-Page-Content-Product";
+
+    modSitePage? pageItem = null;
+    if (HttpContext.Items["PageContent"] != null)
+    {
+        pageItem  = (modSitePage)HttpContext.Items["PageContent"]!;
+    }
+    @await Component.InvokeAsync("PageHeroProduct", new { pageItem = pageItem })
+
+    switch (Request.Path)
+    {
+        case "/produkter":
+            @await Component.InvokeAsync("ProductList", new { productgroupid = CLCustAppsettings.CORE_PRODUCT_GROUP })
+            @await Component.InvokeAsync("FormGetYourTeam", new { pageid = CLCustAppsettings.FORM_PRODUCTS_PAGEID })
+            break;
+        default:
+            ViewData["CurrentPageProductId"] = pageItem!.pageId;
+            @await Component.InvokeAsync("PageProductTop", new { pageid = pageItem!.pageId })
+            @await Component.InvokeAsync("ProductWorkingProcess", new { pageare = CLCustAppsettings.WORKINGPROCESS_START_PAGEID })
+            @await Component.InvokeAsync("FormGetYourTeam", new { pageid = CLCustAppsettings.FORM_PRODUCTS_PAGEID })
+            break;
+    }
+}
+

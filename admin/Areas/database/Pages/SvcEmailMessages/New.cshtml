@@ -1,0 +1,210 @@
+﻿@page
+@model ADMIN.ITEGAMAX._4._0.Areas.database.Pages.SvcEmailMessages.NewModel
+@{
+	ViewData["Title"] = "svc_email_messages";
+}
+
+<!-- Page Header -->
+<div class="d-md-flex d-block align-items-center justify-content-between my-2 page-header-breadcrumb">
+    <div>
+        <h4 class="mb-0">Redigera sida: @ViewData["Title"]</h4>
+        <p class="mb-0 text-muted">Den här sidan används för att lägga till en ny e-postlogg.</p>
+    </div>
+    <div class="main-dashboard-header-right col-xl-3 col-lg-7 w-50">
+        <div>
+            <label class="fs-13 text-muted">Antal Visningar:</label>
+            <div class="main-star">
+                <span>(@Model.SvcEmailMessage.Viewcount)</span>
+            </div>
+        </div>
+        <div>
+            <label class="fs-13 text-muted">Updaterade</label>
+            <h6 class="mb-0 fw-semibold">@(!string.IsNullOrEmpty(Model.SvcEmailMessage.SEMsgUpdatedDate.ToString()) ? Model.SvcEmailMessage.SEMsgUpdatedDate.ToString()!.Substring(0, 10) : "")</h6>
+        </div>
+        <div>
+            <label class="fs-13 text-muted">Skapade</label>
+            <h6 class="mb-0 fw-semibold">@(!string.IsNullOrEmpty(Model.SvcEmailMessage.SEMsgCreatedDate.ToString()) ? Model.SvcEmailMessage.SEMsgCreatedDate.ToString()!.Substring(0, 10) : "")</h6>
+        </div>
+    </div>
+</div>
+
+<div class="col-xl-3 col-lg-7 w-100">
+	<div class="card">
+		<div class="card-body">
+            <div class="d-flex gap-2 mb-3">
+
+                <button type="button" class="btn btn-primary" onclick="window.location.href='/database/SvcEmailMessages'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-columns-reverse" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 .5m4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10A.5.5 0 0 1 4 .5m-4 2A.5.5 0 0 1 .5 2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-4 2A.5.5 0 0 1 .5 4h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m-4 2A.5.5 0 0 1 .5 6h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5m-4 2A.5.5 0 0 1 .5 8h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5m-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5m-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    Till listan
+                </button>
+            </div>
+            <hr class="mt-1 mb-2" />
+            <form class="form-horizontal" method="POST">
+
+                <div class="mb-4 mt-3 main-content-label">Avsändare</div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Från e-post:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" asp-for="SvcEmailMessage.SEMsgFrom" required placeholder="E-postadress">
+                            <span asp-validation-for="SvcEmailMessage.SEMsgFrom" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Från namn:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="SvcEmailMessage.SEMsgFromName" placeholder="Namn">
+                            <span asp-validation-for="SvcEmailMessage.SEMsgFromName" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4 mt-5 main-content-label">Mottagare</div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Till e-post:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" asp-for="SvcEmailMessage.SEMsgTo" required placeholder="E-postadress">
+                            <span asp-validation-for="SvcEmailMessage.SEMsgTo" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Till namn:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="SvcEmailMessage.SEMsgToName" placeholder="Namn">
+                            <span asp-validation-for="SvcEmailMessage.SEMsgToName" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Svara till e-post:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" asp-for="SvcEmailMessage.SEMsgReplyTo" placeholder="E-postadress">
+                            <span asp-validation-for="SvcEmailMessage.SEMsgReplyTo" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4 mt-5 main-content-label">E-postinnehåll</div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Ämne:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="SvcEmailMessage.SEMsgSubject" placeholder="Ange ämne">
+                            <span asp-validation-for="SvcEmailMessage.SEMsgSubject" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="form-label mb-0">Meddelande (HTML):</label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea class="form-control" rows="5" asp-for="SvcEmailMessage.SEMsgBodyHtml" required placeholder="Ange e-postmeddelandets innehåll (HTML-format)"></textarea>
+                            <span asp-validation-for="SvcEmailMessage.SEMsgBodyHtml" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">HTML-format:</label>
+                        </div>
+                        <div class="col-md-10 d-flex align-items-center">
+                            <input type="hidden" asp-for="SvcEmailMessage.SEMsgIsHtml" value="false" />
+                            <input type="checkbox" asp-for="SvcEmailMessage.SEMsgIsHtml" />
+                            <span class="form-text text-sm mt-0 ms-1 me-2">* Markera om e-postmeddelandet är i HTML-format.</span>
+                            <span asp-validation-for="SvcEmailMessage.SEMsgIsHtml" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4 mt-5 main-content-label">Inställningar</div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Har bilagor:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="checkbox" asp-for="SvcEmailMessage.SEMsgHasAttachments" />
+                            <span asp-validation-for="SvcEmailMessage.SEMsgHasAttachments" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">System:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="number" class="form-control" required min="0" max="10" asp-for="SvcEmailMessage.SEMsgSystem" placeholder="Ange systemvärde">
+                            <span class="form-text">* Ange ett system-ID, standard är 0.</span>
+                            <span asp-validation-for="SvcEmailMessage.SEMsgSystem" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Status:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <select class="form-control" asp-for="SvcEmailMessage.SEMsgStatus" required>
+                                <option value="1">Inaktiv</option>
+                                <option value="2">Dold</option>
+                                <option value="3" selected>Aktiv</option>
+                            </select>
+                            <span asp-validation-for="SvcEmailMessage.SEMsgStatus" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden Fields -->
+                <input type="hidden" asp-for="SvcEmailMessage.SEMsgCreatedDate" value="@DateTime.Now" />
+                <input type="hidden" asp-for="SvcEmailMessage.SEMsgUpdatedDate" value="@DateTime.Now" />
+                <input type="hidden" asp-for="SvcEmailMessage.SEMsgId" value="@Guid.NewGuid().ToString()">
+
+                <div class="card-footer pb-0 d-flex">
+                    <input type="submit" class="btn btn-primary waves-effect waves-light" style="min-width: 160px;" value="Redigera ändringar" />
+                    <input type="button" class="btn btn-secondary ms-4 waves-effect waves-light" style="min-width: 160px;" value="Avbryt" onclick="window.location.href='/database/SvcEmailMessages'" />
+                </div>
+            </form>
+
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

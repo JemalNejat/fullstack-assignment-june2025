@@ -1,0 +1,42 @@
+﻿@{
+    if (Model != null)
+    {
+
+        modSitePage prodUnderPage = Model;
+
+        <div class="about-right wow fadeInUp" data-wow-delay=".25s">
+            <div class="site-heading mb-3">
+                <span class="site-title-tagline"><i class="fas fa-percent"></i> @prodUnderPage.pagesubtitle</span>
+                <h2 class="site-title">
+                    @prodUnderPage.pagetitle
+                </h2>
+            </div>
+            <p class="about-text">
+                @Html.Raw(prodUnderPage.pageshortdescription)
+            </p>
+            <div class="about-list-wrap">
+                <ul class="about-list">
+                    <li>
+                        <div class="icon">
+                            <img src="~/assets/img/icon/rating-2.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <h4>Clients Satisfaction</h4>
+                            <p>Take a look at our round up of the best shows.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="~/assets/img/icon/team.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <h4>Professional Team</h4>
+                            <p>It has survived words which not only five centuries.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="about" class="theme-btn">Discover More<i class="fas fa-arrow-right"></i></a>
+        </div>
+    }
+}

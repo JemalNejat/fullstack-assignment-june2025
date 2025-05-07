@@ -1,0 +1,49 @@
+﻿@{
+    if (Model != null)
+    {
+        string pagetopbanner;
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+        if (!String.IsNullOrEmpty(Model?.pagetopbannerpic))
+        {
+            pagetopbanner = imagespagedir + "/" + Model?.pageurlid.Replace("/", "") + "/" + Model?.pagetopbannerpic!;
+        }
+        else
+        {
+            pagetopbanner = "../assets/img/breadcrumb/01.jpg";
+        }
+        <!-- hero section -->
+        <div class="hero-section hs-2">
+            <div class="hero-text-shape">
+                <p>ITeGAMAX</p>
+            </div>
+            <div class="hero-single" style="background: url('@pagetopbanner')">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 col-lg-7">
+                            <div class="hero-content">
+                                @if (!string.IsNullOrEmpty(Model.pagesubtitle))
+                                {
+                                <h6 class="hero-sub-title">@Model?.pagesubtitle</h6>
+                                }
+                                @if (!String.IsNullOrEmpty(Model?.pagetitle))
+                                {
+                                    <h1 class="hero-title">
+                                        @Model?.pagetitle
+                                    </h1>
+                                }
+                                @if (!String.IsNullOrEmpty(Model?.pageshortdescription))
+                                {
+                                    <p>
+                                        @Model?.pageshortdescription
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- hero section end -->
+    }
+}

@@ -1,0 +1,125 @@
+﻿@{
+    if (Model != null)
+    {
+        List<modProduct> productslist = Model;
+        
+        <!-- product area -->
+        <div class="pricing-area py-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="fas fa-percent"></i> Med oss får ni:</span>
+                            <h2 class="site-title2"><span>Skräddarsydda Team</span> , designade för att matcha era affärsmål</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    @foreach (var item in productslist)
+                    {
+                        string recomproduct;
+                        if (item.pd_position == 2)
+                        {
+                            recomproduct = "active";
+                        }
+                        else
+                        {
+                            recomproduct = "";
+                        }
+                        <div class="col-md-6 col-lg-4">
+                            <div class="pricing-item @Html.Raw(recomproduct) wow fadeInUp" data-wow-delay=".25s">
+                                <div class="pricing-shape">
+                                    <img src="assets/img/shape/08.png" alt="">
+                                </div>
+                                <div class="pricing-header">
+                                    <h5>@item.pd_type</h5>
+                                </div>
+                                <div class="pricing-amount">
+                                    <strong>@item.pd_name</strong><span class="pricing-amount-type">/Skräddarsydda</span>
+                                </div>
+                                <div class="pricing-btn">
+                                    <a href="/produkter/@item.pd_name!.ToLower().Replace(" ","-")" class="theme-btn">Utforska @item.pd_type <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                @{
+                                    if (item.productfeatures != null)
+                                    {
+                                        <div class="pricing-feature">
+                                            <ul>
+                                                @foreach (var itempf in item.productfeatures)
+                                                {
+                                                    if ((bool)itempf.pfr_activated!)
+                                                    {
+                                                        <li><i class="fas fa-check-circle"></i>@itempf.pf_name</li>
+                                                    }
+                                                    else
+                                                    {
+                                                        <li><i class="fas fa-times-circle not-include"></i>@itempf.pf_name</li>
+                                                    }
+                                                }
+                                            </ul>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @* <div class="col-md-6 col-lg-4">
+            <div class="pricing-item active wow fadeInDown" data-wow-delay=".25s">
+            <div class="pricing-shape">
+            <img src="assets/img/shape/08.png" alt="">
+            </div>
+            <div class="pricing-header">
+            <h5>Standard</h5>
+            </div>
+            <div class="pricing-amount">
+            <strong>Standard Team</strong><span class="pricing-amount-type">/Skräddarsydda</span>
+            </div>
+            <div class="pricing-btn">
+            <a href="/produkter/standard-team" class="theme-btn">Utforska Standard <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="pricing-feature">
+            <ul>
+            <li><i class="fas fa-check-circle"></i>IRS Tax Problems</li>
+            <li><i class="fas fa-check-circle"></i>Business Tax Consulting</li>
+            <li><i class="fas fa-check-circle"></i>Tax Preparation and Planning</li>
+            <li><i class="fas fa-check-circle"></i>Tax Payroll Services</li>
+            <li><i class="fas fa-check-circle"></i>Bookkeeping and Virtual CFO</li>
+            <li><i class="fas fa-times-circle not-include"></i>Accounting Virtual Controller</li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+            <div class="pricing-item wow fadeInUp" data-wow-delay=".25s">
+            <div class="pricing-shape">
+            <img src="assets/img/shape/08.png" alt="">
+            </div>
+            <div class="pricing-header">
+            <h5>Premium</h5>
+            </div>
+            <div class="pricing-amount">
+            <strong>Premium Team</strong><span class="pricing-amount-type">/Skräddarsydda</span>
+            </div>
+            <div class="pricing-btn">
+            <a href="/produkter/premium-team" class="theme-btn">Utforska Premium <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="pricing-feature">
+            <ul>
+            <li><i class="fas fa-check-circle"></i>IRS Tax Problems</li>
+            <li><i class="fas fa-check-circle"></i>Business Tax Consulting</li>
+            <li><i class="fas fa-check-circle"></i>Tax Preparation and Planning</li>
+            <li><i class="fas fa-check-circle"></i>Tax Payroll Services</li>
+            <li><i class="fas fa-check-circle"></i>Bookkeeping and Virtual CFO</li>
+            <li><i class="fas fa-check-circle"></i>Accounting Virtual Controller</li>
+            </ul>
+            </div>
+            </div>
+            </div> *@
+                </div>
+            </div>
+        </div>
+        <!-- product area end -->
+    }
+
+}

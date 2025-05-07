@@ -1,0 +1,58 @@
+﻿<!-- contact info -->
+<div class="contact-area pt-60">
+    <div class="container">
+        <div class="contact-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <div class="contact-info-icon">
+                            <i class="fal fa-map-location-dot"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h5>@Resources.mainstrings.strofficeaddress</h5>
+                            <p>@CLCompanySettings.COMPANY_POST_OFFICE<br /> @CLCompanySettings.COMPANY_POSTAL_CODE  @CLCompanySettings.COMPANY_CITY<br /> @CLCompanySettings.COMPANY_COUNTRY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <div class="contact-info-icon">
+                            <i class="fal fa-phone-volume"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h5>@Resources.mainstrings.strcallus</h5>
+                            <p>@CLCompanySettings.COMPANY_PHONE</p>
+                            <br /><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <div class="contact-info-icon">
+                            <i class="fal fa-envelopes"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h5>@Resources.mainstrings.stremailus</h5>
+                            <p><span style="cursor:pointer;" onclick="javascript:CreateMail('info|se|itegamax|ITeGAMAX%20Feedback%20-%20Info|%0ADitt%20f%C3%B6r-%20efternamn%3A%20%0ADitt%20f%C3%B6retagsnamn%3A%0ADin%20e-postadress%3A%20%0ADitt%20telefonnummer%3A%20%0A-----------------------------%0AMeddelande%20till%20oss%3A%20%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A');">info<!---->@@<!---->itegamax.se</span></p>
+                        <br /><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <div class="contact-info-icon">
+                            <i class="fal fa-alarm-clock"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h5>@Resources.mainstrings.stropentime</h5>
+                            <p> @Resources.mainstrings.strweekdays (@CLCompanySettings.COMPANY_OPENINGHOURS_WEEKDAYS)</p>
+                            @Resources.mainstrings.strholidays @CLCompanySettings.COMPANY_OPENINGHOURS_HOLIDAYS
+                            <br /><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end contact info -->

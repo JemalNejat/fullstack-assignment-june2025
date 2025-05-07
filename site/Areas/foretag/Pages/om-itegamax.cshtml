@@ -1,0 +1,64 @@
+﻿@page "{pagetitle=index}"
+@using SITE.ITEGAMAX._4._0._2
+
+@using SITE.ITEGAMAX._4._0._2.Models;
+@model SITE.ITEGAMAX._4._0._2.Areas.foretag.Pages.om_itegamaxModel
+@{
+    Layout = "_Layout-Page-Hero";
+
+    modSitePage? pageItem = null;
+    if (HttpContext.Items["PageContent"] != null)
+    {
+        pageItem = (modSitePage)HttpContext.Items["PageContent"]!;
+    }
+    string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+    string areaname = Request.Path.ToString().Split("/")[1];
+
+    @await Component.InvokeAsync("PageHeroTop", new { sitepage = pageItem })
+}
+<div class="service-single py-120">
+    <div class="container">
+        <div class="service-single-wrapper">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4">
+                    <div class="service-sidebar">
+                        @await Component.InvokeAsync("PageSimpleMenu", new { menuarea = pageItem!.pagemenuarea })
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8">
+                    @{
+                        if (("/" + areaname) == pageItem.pageurlid)
+                        {
+                            @await Component.InvokeAsync("PageAreaSimple", new { pageare = pageItem!.pagemenuarea })
+                            ;
+                        }
+                        else
+                        {
+                            <div class="service-details">
+                                @{
+                                    if (pageItem != null)
+                                    {
+                                        if (!string.IsNullOrEmpty(pageItem.pagemediumbannerpic))
+                                        {
+                                            string img = imagespagedir + "/" + pageItem.pageurlid!.Replace("/", "") + "/" + pageItem.pagemediumbannerpic!;
+                                            <div class="service-details-img mb-30">
+                                                <img src="@img" alt="thumb" style="height: auto; width: 100%; max-height: 600px;">
+                                            </div>
+                                        }
+                                    }
+                                }
+                                <div class="my-4">
+                                    @await Component.InvokeAsync("PageContentSimple", new { pagearticles = pageItem?.Articles })
+                                </div>
+                            </div>
+                        }
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("ProductListSmall", new { pageare = CLCustAppsettings.PRODUCT_START_PAGEID })
+    @await Component.InvokeAsync("ServiceSlide", new { pageare = CLCustAppsettings.SERVICE_START_PAGEID }))
+</div>

@@ -1,0 +1,48 @@
+﻿@{
+    if (Model != null)
+    {
+        List<modProduct> productslist = Model;
+        <div class="row g-5">
+            @foreach (var item in productslist)
+            {
+                if (item.pd_page_id == int.Parse(ViewData["CurrentPageProductId"]!.ToString()!))
+                {
+                  <div class="col-md-12 col-lg-12">
+                        <div class="pricing-item active wow fadeInUp" data-wow-delay=".25s">
+                        <div class="pricing-shape">
+                            <img src="assets/img/shape/08.png" alt="">
+                        </div>
+                        <div class="pricing-header">
+                            <h5>@item.pd_type</h5>
+                        </div>
+                        <div class="pricing-amount">
+                            <strong>@item.pd_name</strong>
+                            </div>
+                        @{
+                            if (item.productfeatures != null)
+                            {
+                                <div class="pricing-feature" style="padding:0;">
+                                    <ul>
+                                        @foreach (var itempf in item.productfeatures)
+                                        {
+                                            if ((bool)itempf.pfr_activated!)
+                                            {
+                                                <li><i class="fas fa-check-circle"></i>@itempf.pf_name</li>
+                                            }
+                                            else
+                                            {
+                                                <li><i class="fas fa-times-circle not-include"></i>@itempf.pf_name</li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>  
+                }
+                
+            }
+        </div>
+    }
+}

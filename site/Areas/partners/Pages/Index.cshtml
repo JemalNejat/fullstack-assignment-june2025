@@ -1,0 +1,17 @@
+﻿@page "{pagetitle=index}"
+@using SITE.ITEGAMAX._4._0._2
+@using SITE.ITEGAMAX._4._0._2.Models;
+@model SITE.ITEGAMAX._4._0._2.Areas.partners.Pages.IndexModel
+@{
+    modSitePage? pageItem = null;
+    if (HttpContext.Items["PageContent"] != null)
+    {
+        pageItem = (modSitePage)HttpContext.Items["PageContent"]!;
+    }
+    string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+    string areaname = Request.Path.ToString().Split("/")[1];
+
+    @await Component.InvokeAsync("Breadcrumb", new { _controlpageItem = pageItem })
+}
+

@@ -1,0 +1,49 @@
+﻿@{
+    if (Model != null)
+    {
+
+        string pagepath = Context.Request.Path.ToString().Replace("/", "");
+        string imagepath = CLCustAppsettings.IMAGE_PAGES_PATH + pagepath + "/";
+
+        List<modSitePageArticle> articlelist = Model!;
+
+        if (articlelist.Count > 0)
+        {
+            <div>
+                @{
+                    foreach (var item in articlelist)
+                    {
+                        @if ((item.article_picture != null) && (!String.IsNullOrEmpty(item.article_picture)))
+                        {
+                            <div class="service-details-img mb-30">
+                                <a href="@item.article_picture_linkurl" title="@item.article_picture_linktitle"><img src="@imagepath@item.article_picture" alt="@item.articletitle" style="height: auto; width: 100%; max-height: 600px;"></a>
+                            </div>
+                        }
+                        @if ((item.articletitle != null) && (!String.IsNullOrEmpty(item.articletitle)))
+                        {
+                            <h3 class="mb-3">@item.articletitle</h3>
+                        }
+                        @if ((item.articlesubtitle != null) && (!String.IsNullOrEmpty(item.articlesubtitle)))
+                        {
+                            <h2>@item.articlesubtitle</h2>
+                        }
+
+                        @if ((item.articletext != null) && (!String.IsNullOrEmpty(item.articletext)))
+                        {
+                            <div class="page-content">
+                                @Html.Raw(item.articletext)
+                            </div>
+                        }
+
+                        @if ((item.article_picture_linkurl != null) && (!String.IsNullOrEmpty(item.article_picture_linkurl)))
+                        {
+                            <div>
+                                <a class="btn" href="@item.article_picture_linkurl" title="@item.article_picture_linktitle">@item.article_picture_linktitle</a>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        }
+    }
+}

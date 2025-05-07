@@ -1,0 +1,64 @@
+﻿@{
+    if (Model != null)
+    {
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+        List<modSitePage> sitepages = Model;
+        <!-- product area -->
+        <div class="feature-area py-40">
+            <div class="container">
+                <div class="row">
+                    <br /><br /><br />
+                </div>
+            </div>
+        </div>
+        <div class="feature-area py-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="fas fa-percent"></i>  Med oss får ni:</span>
+                            <h2 class="site-title2"><span>Skräddarsydda Team</span>, designade för att matcha era affärsmål</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-wrap mt-40">
+                    <div class="row g-4">
+                        @{
+                            for (int i = 0; i < sitepages.Count; i++)
+                            {
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="feature-item wow fadeInUp" data-wow-delay=".25s">
+                                        <span class="count">0@(i + 1)</span>
+                                        <div class="feature-icon">
+                                            <a href="@(sitepages[i].pageurlid)" title="@(sitepages[i].pagetitle)">
+                                                <img src="~/site_icons/page-product-@(sitepages[i].pageId).svg" alt="@(sitepages[i].pagetitle)" />
+                                            </a>
+                                        </div>
+                                        <div class="feature-content">
+                                            <a href="@(sitepages[i].pageurlid)" title="@(sitepages[i].pagetitle)">
+                                                <h3>@(sitepages[i].pagetitle)</h3>
+                                            </a>
+                                            <h5>
+                                                @(sitepages[i].pagesubtitle)
+                                            </h5>
+                                            <p>
+                                                @(sitepages[i].pageshortdescription)
+                                            </p>
+                                            <br />
+                                            <p>
+                                                <a href="@(sitepages[i].pageurlid)" class="theme-btn">@Resources.mainstrings.strdiscovermore<i class="fas fa-arrow-right"></i></a>
+                                            </p>
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- product area end -->
+    }
+}

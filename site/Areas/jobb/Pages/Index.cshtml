@@ -1,0 +1,122 @@
+﻿@page "{pagetitle=index}"
+@using SITE.ITEGAMAX._4._0._2;
+
+@using SITE.ITEGAMAX._4._0._2.Models;
+@model SITE.ITEGAMAX._4._0._2.Areas.jobb.Pages.IndexModel
+@{
+
+    modSitePage? pageItem = null;
+    if (HttpContext.Items["PageContent"] != null)
+    {
+        pageItem = (modSitePage)HttpContext.Items["PageContent"]!;
+    }
+    string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+    string areaname = Request.Path.ToString().Split("/")[1];
+
+
+}
+<!-- hero area -->
+<div class="hero-section hs-1">
+    <div class="hero-single">
+        <div class="hero-shape">
+            <img src="~/assets/img/shape/02.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-6">
+                    <div class="hero-content">
+                        <h6 class="hero-sub-title"><i class="fas fa-percent"></i> @pageItem!.pagesubtitle</h6>
+                        @{
+                            if (!string.IsNullOrEmpty(pageItem.pagesubtitle))
+                            {
+                                <h1 class="hero-title">
+                                    @pageItem.pagetitle
+                                </h1>
+                            }
+                        }
+                        @{
+                            if (!string.IsNullOrEmpty(pageItem.pageshortdescription))
+                            {
+                                <p>
+                                    @Html.Raw(pageItem.pageshortdescription)
+                                </p>
+                            }
+                        }
+                        <div class="partner-area pa-1 mt-10">
+                            <div class="partner-content">
+                                <h6>Följ <span>med oss</span> på resan!</h6>
+                            </div>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="/jobb/spontanansokan" class="theme-btn">
+                                @SITE.ITEGAMAX._4._0._2.Resources.mainstrings.strspontaneousapplication<i class="fas fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-6">
+                    <div class="hero-img-wrap">
+                        <div class="hero-img">
+                            <img id="theImageSlide" imagedata="1,2,3,4,5,6" imagepath="/site_imgs/jobba-hos-oss/" alt="@pageItem.pagetitle">
+                        </div>
+                        <div class="hero-img-shape">
+                            <img src="~/assets/img/shape/01.png" alt="">
+                        </div>
+                    </div>
+                </div>
+               @*  <div class="col-md-12 col-lg-6">
+                    <div class="hero-img-wrap">
+                        <div class="hero-img">
+                            @{
+                                if (!string.IsNullOrEmpty(pageItem.pagetopbannerpic))
+                                {
+                                    string img = imagespagedir + "/" + pageItem.pageurlid!.Replace("/", "") + "/" + pageItem.pagetopbannerpic!;
+                                    <img src="@img" alt="@pageItem.pagetitle">
+                                }
+                            }
+                        </div>
+                        <div class="hero-img-shape">
+                            <img src="~/assets/img/shape/01.png" alt="">
+                        </div>
+                    </div>
+                </div> *@
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hero area end -->
+<div class="service-single py-80">
+    <div class="container">
+        <div class="service-single-wrapper">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4">
+                    @await Component.InvokeAsync("PageSimpleMenu", new { menuarea = CLCustAppsettings.JOBB_START_PAGEID })
+                </div>
+                <div class="col-xl-8 col-lg-8">
+                    @{
+                        if (("/" + areaname) == pageItem.pageurlid)
+                        {
+                            @await Component.InvokeAsync("PageAreaSimple", new { pageare = pageItem.pagemenuarea })
+                        }
+                        else
+                        {
+                            <div class="service-details">
+                                <div class="my-4">
+                                    @await Component.InvokeAsync("PageContentSimple", new { pagearticles = pageItem?.Articles })
+                                </div>
+                            </div>
+
+                            @await Component.InvokeAsync("JobFormSpontaneous", new { pageid = 228 })
+                        }
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("ProductListSmall", new { pageare = CLCustAppsettings.PRODUCT_START_PAGEID })
+    @await Component.InvokeAsync("ServiceSlide", new { pageare = CLCustAppsettings.SERVICE_START_PAGEID })
+</div>

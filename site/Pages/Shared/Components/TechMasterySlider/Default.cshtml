@@ -1,0 +1,35 @@
+﻿@{
+
+
+	if (Model != null)
+	{
+		string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+		List<modSitePage> sitepages = Model;
+
+		<!-- Tech mastery area -->
+		<div class="pt-120">
+			<div class="partner-area bg pt-60 pb-60">
+				<div class="row">
+					<div class="col-lg-6 mx-auto">
+						<div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+							<h2 class="site-title2"><span>Teknologier</span> vi arbetar med inkluderar:</h2>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="partner-wrapper partner-slider owl-carousel owl-theme">
+
+						@{
+							foreach (var item in sitepages)
+							{
+								<a href="..@item.pageurlid" title="@item.pagetitle"><img src="@(imagespagedir + "/" +  item.pageurlid!.Replace("/","") + "/" + item.pagesmallbannerpic)" alt="@item.pagetitle" title="@item.pagetitle"></a>
+							}
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Tech mastery area end -->
+	}
+}

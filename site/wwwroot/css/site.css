@@ -1,0 +1,218 @@
+/* ITeGAMAX Logotype - start*/
+.gamax-text_logo_1 {
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'Oswald', sans-serif !important;
+    color: #000;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-size-adjust: 100%;
+    transition: ease all 0.5s;
+    font-optical-sizing: auto;
+}
+
+    .gamax-text_logo_1 a {
+        color: #000;
+        text-decoration: none;
+    }
+
+        .gamax-text_logo_1 a:hover {
+            text-decoration: none;
+            color: #0c94e4;
+        }
+
+.gamax-image_logo_1 {
+    max-width: 35px;
+    vertical-align: middle;
+    border: 0;
+    transition: .3s;
+    margin-top: -15px;
+    margin-right: 3px;
+}
+
+.gamax-text_logo_2 {
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'Oswald', sans-serif;
+    color: #FFFFFF;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+    .gamax-text_logo_2 a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+        .gamax-text_logo_2 a:hover {
+            text-decoration: none;
+            font-weight: 600;
+            font-style: normal;
+            color: #0c94e4;
+        }
+
+.gamax-image_logo_2 {
+    max-width: 50px;
+    vertical-align: middle;
+    border: 0;
+    transition: .3s;
+    margin-top: -25px;
+    margin-right: 8px;
+}
+
+.gamax-text_logo_3 {
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'Oswald', sans-serif !important;
+    color: #0c94e4;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-size-adjust: 100%;
+    transition: ease all 0.5s;
+    font-optical-sizing: auto;
+}
+
+    .gamax-text_logo_3 a {
+        color: #0c94e4;
+        text-decoration: none;
+    }
+
+        .gamax-text_logo_3 a:hover {
+            text-decoration: none;
+            color: #0c94e4;
+        }
+
+@media (max-width: 1039px) {
+    .gamax-text_logo_1 {
+        font-size: 30px;
+        line-height: 1.1;
+        letter-spacing: 0px;
+    }
+
+    .gamax-text_logo_2 {
+        font-size: 30px;
+        line-height: 1.1;
+        letter-spacing: 0px;
+    }
+
+    .gamax-image_logo_2 {
+        max-width: 40px;
+        vertical-align: middle;
+        border: 0;
+        transition: .3s;
+        margin-top: -15px;
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gamax-text_logo_1 {
+        font-size: 24px;
+        line-height: 1.3;
+        letter-spacing: 0px;
+    }
+
+    .gamax-text_logo_2 {
+        font-size: 24px;
+        line-height: 1.3;
+        letter-spacing: 0px;
+    }
+
+    .gamax-image_logo_2 {
+        max-width: 30px;
+        vertical-align: middle;
+        border: 0;
+        transition: .3s;
+        margin-top: -10px;
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 479px) {
+    .gamax-text_logo_1 {
+        font-size: 24px;
+        line-height: 1.3;
+        letter-spacing: 0px;
+    }
+
+    .gamax-text_logo_2 {
+        font-size: 24px;
+        line-height: 1.3;
+        letter-spacing: 0px;
+    }
+
+    .gamax-image_logo_2 {
+        max-width: 30px;
+        vertical-align: middle;
+        border: 0;
+        transition: .3s;
+        margin-top: -10px;
+        margin-right: 2px;
+    }
+}
+
+.gamax-text_logo_1-e {
+    font-family: 'Oswald', sans-serif;
+    color: #0c94e4;
+}
+
+.gamax-text_logo_2-e {
+    font-family: 'Oswald', sans-serif;
+    color: #0c94e4;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px; /* Avstånd mellan raderna */
+}
+/* ITeGAMAX Logotype - end*/
+/* Page content text - end*/
+
+/* Page content text*/
+.page-content {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333333;
+    padding: 20px;
+}
+
+    .page-content strong {
+        font-size: 20px;
+        font-weight: 600;
+        color: #222222;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .page-content ul, .page-content ol {
+        margin: 0.5em 0;
+        padding-left: 2.5em;
+        list-style-position: outside; 
+        list-style: disc !important;
+    }
+
+    .page-content li {
+        margin-bottom: 0.5em;
+        color: #555555;
+        list-style: disc !important;
+    }
+
+    .page-content a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+        .page-content a:hover {
+            text-decoration: underline;
+        }
+    .page-content p {
+        margin-bottom: 1.5em;
+    }

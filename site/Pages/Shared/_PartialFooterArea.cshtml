@@ -1,0 +1,112 @@
+﻿<div class="pt-120">
+<footer class="footer-area">
+    <div class="footer-shape">
+        <img src="~/assets/img/shape/03.png" alt="">
+    </div>
+    <div class="footer-widget">
+        <div class="container">
+            <div class="footer-widget-wrap pt-100 pb-70">
+                <div class="row g-5">
+                    <div class="col-md-12 col-lg-5">
+                        <div class="footer-widget-box about-us">
+                            <div class="logo">
+                                <a href="~/">
+                                    <img title="ITeGAMAX" class="gamax-image_logo_2" alt="ITeGAMAX" src="~/assets/img/logo/itegamax-logo-icon.png">
+                                </a>
+                                <span class="gamax-text_logo_2"><a href="~/" target="_self"><span>IT<span class="gamax-text_logo_2-e">e</span>GAMAX</span></a></span>
+                            </div>
+                            <p class="mb-4">
+                                @await Component.InvokeAsync("PageOnlyDescription", new { pageid = 134 })
+                            </p>
+                            <div class="footer-newsletter">
+                                <h6>Forma framgång med oss</h6>
+                                <button class="theme-btn" onclick="window.location.href='/partners'">
+                                    Bli partner <i class="fa-light fa-handshake"></i>
+                                </button>
+                            </div>
+                            <br />
+                            <div class="footer-newsletter">
+                                <h6>Din nästa nivå börjar här</h6>
+                                <button class="theme-btn" onclick="window.location.href='/konsultnatverk'">
+                                    Gå med nu <i class="fa-regular fa-chart-network"></i>
+                                </button>
+                            </div>
+                            <br />
+                            <div class="footer-newsletter">
+                                <h6>Möjligheter väntar i vårt nätverk</h6>
+                                <button class="theme-btn" onclick="window.location.href='/itegamax-network'">
+                                    Utforska nu <i class="fa-light fa-globe"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        @await Component.InvokeAsync("PageFooterQuickLinks")
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        @await Component.InvokeAsync("PageFooterServices", new { menuarea = CLCustAppsettings.SERVICE_START_PAGEID })
+                        @await Component.InvokeAsync("PageFooterProducts", new { menuarea = CLCustAppsettings.PRODUCT_START_PAGEID })
+                    </div>
+                    <div class="col-md-12 col-lg-3">
+                        <div class="footer-widget-box">
+                            <h4 class="footer-widget-title">@Resources.mainstrings.strcontactus</h4>
+                            <ul class="footer-contact">
+                                <li>
+                                    <div class="icon">
+                                        <i class="far fa-location-dot"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h6>@Resources.mainstrings.strouraddress</h6>
+                                        <p>@CLCompanySettings.COMPANY_NAME<br>@CLCompanySettings.COMPANY_POST_OFFICE<br>@CLCompanySettings.COMPANY_POSTAL_CODE @CLCompanySettings.COMPANY_CITY, @CLCompanySettings.COMPANY_COUNTRY</p>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h6>@Resources.mainstrings.strcallus</h6>
+                                        <span><strong>@Resources.mainstrings.strweekdays:</strong> @CLCompanySettings.COMPANY_OPENINGHOURS_WEEKDAYS</span><br>
+                                        <span><strong>@Resources.mainstrings.strholidays:</strong> @CLCompanySettings.COMPANY_OPENINGHOURS_HOLIDAYS</span><br>
+                                        <span><strong>@Resources.mainstrings.strphone:</strong> <a href="tel:@CLCompanySettings.COMPANY_PHONE">@CLCompanySettings.COMPANY_PHONE</a></span>
+                                    </div>
+
+
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="far fa-envelope"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h6>@Resources.mainstrings.stremailus</h6>
+                                        <span style="cursor:pointer;" onclick="javascript:CreateMail('info|se|itegamax|ITeGAMAX%20Feedback%20-%20Info|%0ADitt%20f%C3%B6r-%20efternamn%3A%20%0ADitt%20f%C3%B6retagsnamn%3A%0ADin%20e-postadress%3A%20%0ADitt%20telefonnummer%3A%20%0A-----------------------------%0AMeddelande%20till%20oss%3A%20%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A');"><strong>info<!---->@@<!---->itegamax.se</strong></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <p class="copyright-text">
+                        &copy; @Resources.mainstrings.strcopyright <span id="date"></span> <a href="~/"> @CLCompanySettings.COMPANY_NAME</a>. @Resources.mainstrings.strallrightsreserved
+                    </p>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    @await Component.InvokeAsync("FollowUsFooter")
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>

@@ -1,0 +1,62 @@
+﻿<div class="sidebar-popup">
+    <div class="sidebar-wrapper">
+        <div class="sidebar-content">
+            <button type="button" class="close-sidebar-popup"><i class="far fa-xmark"></i></button>
+            <div class="sidebar-logo">
+                <div class="logo">
+                    <a href="../">
+                        <img title="ITeGAMAX" class="gamax-image_logo_1" alt="ITeGAMAX" src="~/assets/img/logo/itegamax-logo-icon.png">
+                    </a>
+                    <span class="gamax-text_logo_1"><a href="~/" target="_self"><span>IT<span class="gamax-text_logo_1-e">e</span>GAMAX</span></a></span>
+                </div>
+            </div>
+            @{
+                if (Model != null)
+                {
+                    modSitePage smallpage = Model;
+
+                    <div class="sidebar-about">
+                        <h4>@smallpage.pagesubtitle</h4>
+                        <p>
+                            @smallpage.pageshortdescription
+                        </p>
+                    </div>
+                }
+
+            }
+
+            @* <br />
+            <div>
+                <h6>Forma framgång med oss</h6><br />
+                <button class="theme-btn" onclick="window.location.href='/partners'">
+                    Bli partner <i class="fa-light fa-handshake"></i>
+                </button>
+            </div>
+            <br />
+            <div>
+                <h6>Din nästa nivå börjar här</h6><br />
+                <button class="theme-btn" onclick="window.location.href='/konsultnatverk'">
+                    Gå med nu <i class="fa-regular fa-chart-network"></i>
+                </button>
+            </div> *@
+            <div class="sidebar-contact">
+                <h4>@Resources.mainstrings.strcontactinfo</h4>
+                <ul>
+                    <li>
+                        <h6>@Resources.mainstrings.stremail</h6>
+                        <span style="cursor:pointer;" onclick="javascript:CreateMail('info|se|itegamax|ITeGAMAX%20Feedback%20-%20Info|%0ADitt%20f%C3%B6r-%20efternamn%3A%20%0ADitt%20f%C3%B6retagsnamn%3A%0ADin%20e-postadress%3A%20%0ADitt%20telefonnummer%3A%20%0A-----------------------------%0AMeddelande%20till%20oss%3A%20%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A');"><i class="far fa-envelope"></i><strong>info<!---->@@<!---->itegamax.se</strong></span>
+                    </li>
+                    <li>
+                        <h6>@Resources.mainstrings.strphone</h6>
+                        <a href="tel:@CLCompanySettings.COMPANY_PHONE"><i class="far fa-phone"></i>@CLCompanySettings.COMPANY_PHONE</a>
+                    </li>
+                    <li>
+                        <h6>@Resources.mainstrings.straddress</h6>
+                        <a href="#"><i class="far fa-location-dot"></i>@CLCompanySettings.COMPANY_POST_OFFICE<br>@CLCompanySettings.COMPANY_POSTAL_CODE @CLCompanySettings.COMPANY_CITY, @CLCompanySettings.COMPANY_COUNTRY</a>
+                    </li>
+                </ul>
+            </div>
+            @await Component.InvokeAsync("FollowUsSideBar")
+        </div>
+    </div>
+</div>

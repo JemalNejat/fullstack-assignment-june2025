@@ -1,0 +1,188 @@
+﻿@page 
+@model ADMIN.ITEGAMAX._4._0.Areas.database.Pages.SiteMetatags.ViewModel
+@{
+    ViewData["Title"] = "Visa Site Metatag";
+}
+
+<!-- Sidhuvud -->
+<div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+    <div>
+        <h4 class="mb-0">Datatabell: @ViewData["Title"]</h4>
+        <p class="mb-0 text-muted">Den här sidan visar detaljer för en Site Metatag.</p>
+    </div>
+    <p>
+        <a asp-page="index" class="btn btn-success waves-effect waves-light">Tillbaka</a>
+    </p>
+</div>
+<!-- Slut på Sidhuvud -->
+
+<div class="col-xl-3 col-lg-7 w-100">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex flex-column">
+                <h4 class="mb-3 main-content-label fw-bold">Visa Site Metatag</h4>
+                <hr class="mt-1 mb-2" />
+            </div>
+
+            <!-- Metatag Detayları -->
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Metatag ID:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.StMetatagid" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Titel:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.Metatitle" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Beskrivning:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.Metadescription" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Nyckelord:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.Metakeywords" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Författare:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.Metaauthor" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Referenslänk:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.Metalinkhref" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Canonical URL:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.Metalinkrelcanonical" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Robot-metatag:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.Metanamerobots" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Og Tags -->
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">og:Type:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.MetapropertyogType" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">og:Title:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.MetapropertyogTitle" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Twitter Tags -->
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Twitter:Title:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.MetapropertytwitterTitle" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Twitter:Beskrivning:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.MetapropertytwitterDescription" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dates and Status -->
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Skapad Datum:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.MetapropCreateddate" disabled />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Status:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" value="@Model.stmetatag!.MetapropStatus" disabled />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

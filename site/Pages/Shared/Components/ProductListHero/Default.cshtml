@@ -1,0 +1,49 @@
+﻿@{
+    if (Model != null)
+    {
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+        List<modSitePage> sitepages = Model;
+
+        <!-- feature area -->
+        <div class="feature-area ft-negative">
+            <div class="container">
+                <div class="feature-wrap mt-40">
+                    <div class="row g-4">
+                        @{
+                            for (int i = 0; i < sitepages.Count; i++)
+                            {
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="feature-item wow fadeInUp" data-wow-delay=".25s">
+                                        <span class="count">0@(i + 1)</span>
+                                        <div class="feature-icon">
+                                            <a href="@(sitepages[i].pageurlid)" title="@(sitepages[i].pagetitle)">
+                                                <img src="~/site_icons/page-product-@(sitepages[i].pageId).svg" alt="@(sitepages[i].pagetitle)" />
+                                            </a>
+                                        </div>
+                                        <div class="feature-content">
+                                            <a href="@(sitepages[i].pageurlid)" title="@(sitepages[i].pagetitle)">
+                                                <h3>@(sitepages[i].pagetitle)</h3>
+                                            </a>
+                                            <p>
+                                                @(sitepages[i].pagesubtitle)
+                                            </p>
+                                            <br />
+                                            <p>
+                                                <a href="@(sitepages[i].pageurlid)" class="theme-btn">@Resources.mainstrings.strdiscovermore<i class="fas fa-arrow-right"></i></a>
+                                            </p>
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <!-- feature area end -->
+    }
+}

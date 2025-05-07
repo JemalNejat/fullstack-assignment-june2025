@@ -1,0 +1,57 @@
+﻿@{
+    if (Model != null)
+    {
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+        List<modSitePage> sitepages = Model;
+        <!-- process area -->
+        <div class="process-area">
+            <div class="container">
+                <div class="process-wrap pt-50 pb-50">
+                    <div class="process-shape">
+                        <img src="~/assets/img/shape/09.png" alt="">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mx-auto">
+                            <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                                <span class="site-title-tagline light"><i class="fas fa-percent"></i> @Resources.mainstrings.strworkingprocess</span>
+                                <h2 class="site-title">@Resources.mainstrings.strhowourteamsworks</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 justify-content-between wow fadeInUp" data-wow-delay=".25s">
+                        @{
+                            for (int i = 0; i < sitepages.Count; i++)
+                            {
+                                <div class="col-lg-3 col-md-6 text-center">
+                                    <div class="process-item">
+                                        <div class="icon">
+                                            <span>0@(i + 1)</span>
+                                            <a href="@sitepages[i].pageurlid" title="@sitepages[i].pagetitle">
+                                                @{
+                                                    if (!string.IsNullOrEmpty(sitepages[i].pagesmallbannerpic))
+                                                    {
+                                                        <img src="@(imagespagedir + "/" + sitepages[i].pageurlid!.Replace("/","") + "/" + sitepages[i].pagesmallbannerpic)" alt="@sitepages[i].pagetitle">
+                                                    }
+                                                    else
+                                                    {
+                                                        <img src="~/assets/img/process/01.jpg" alt="@sitepages[i].pagetitle">
+                                                    }
+                                                }
+                                            </a>
+                                        </div>
+                                        <a href="@sitepages[i].pageurlid" title="@Resources.mainstrings.strdiscovermore">
+                                        <h4>@sitepages[i].pagetitle</h4>
+                                        </a>
+                                        <p>@sitepages[i].pagesubtitle</p>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- process area end -->
+    }
+}

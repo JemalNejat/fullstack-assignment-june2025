@@ -1,0 +1,63 @@
+﻿@{
+    if (Model != null)
+    {
+        modSitePage pageitem = Model;
+
+
+        <div class="testimonial-area bg py-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        @{
+                            foreach (var item in pageitem.Articles!)
+                            {
+                                if (item.article_position == 1)
+                                {
+                                    <div class="site-heading wow fadeInDown" data-wow-delay=".25s">
+                                        <span class="site-title-tagline light"><i class="fas fa-percent"></i> Vår Tjänst</span>
+                                        <h2 class="site-title">@Html.Raw(item.articletitle!.Replace(pageitem.pagetitle!, "<span>" + pageitem.pagetitle + "</span>"))</h2>
+                                        <p>
+                                            @Html.Raw(item.articletext)
+                                        </p>
+                                        <a href="#RequestQuote" class="theme-btn mt-30">Begär offert <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                }
+                            }
+                        }
+
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="testimonial-slider owl-carousel owl-theme wow fadeInUp" data-wow-delay=".25s">
+                            @{
+                                foreach (var itemother in pageitem.Articles!)
+                                {
+                                    if (itemother.article_position != 1)
+                                    {
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-quote">
+                                                <span class="testimonial-quote-icon"><i class="fal fa-quote-right"></i></span>
+                                                <p>
+                                                    @Html.Raw(itemother.articletext)
+                                                </p>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <div class="testimonial-author-img">
+                                                    <img src="assets/img/testimonial/01.jpg" alt="">
+                                                </div>
+                                                <div class="testimonial-author-info">
+                                                    <h4>@itemother.articletitle</h4>
+                                                    <p>@itemother.articlesubtitle</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+

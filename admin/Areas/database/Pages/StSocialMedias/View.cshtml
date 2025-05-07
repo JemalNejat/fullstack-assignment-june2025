@@ -1,0 +1,98 @@
+﻿@page
+@model ADMIN.ITEGAMAX._4._0.Areas.database.Pages.StSocialMedias.ViewModel
+@{
+    ViewData["Title"] = "st_social_media";
+}
+<!-- Page Header -->
+<div class="d-md-flex d-block align-items-center justify-content-between my-2 page-header-breadcrumb">
+    <div>
+        <h4 class="mb-0">Datatabell: @ViewData["Title"]</h4>
+        <p class="mb-0 text-muted">Den här sidan används för att visa detaljer om en specifik social medieplattform.</p>
+    </div>
+    <div class="main-dashboard-header-right col-xl-3 col-lg-7 w-50">
+        <div>
+            <label class="fs-13 text-muted">Antal Visningar:</label>
+            <div class="main-star">
+                <span>(@Model.StSocialMedia.Viewcount)</span>
+            </div>
+        </div>
+        <div>
+            <label class="fs-13 text-muted">Updaterade</label>
+            <h6 class="mb-0 fw-semibold">@(!string.IsNullOrEmpty(Model.StSocialMedia.StSocialMediaUpdateDate.ToString()) ? Model.StSocialMedia.StSocialMediaUpdateDate.ToString()!.Substring(0, 10) : "")</h6>
+        </div>
+        <div>
+            <label class="fs-13 text-muted">Skapade</label>
+            <h6 class="mb-0 fw-semibold">@(!string.IsNullOrEmpty(Model.StSocialMedia.StSocialMediaCreatedDate.ToString()) ? Model.StSocialMedia.StSocialMediaCreatedDate.ToString()!.Substring(0, 10) : "")</h6>
+        </div>
+    </div>
+</div>
+
+<div class="col-xl-3 col-lg-7 w-100">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex gap-2 mb-3">
+                <button type="button" class="btn btn-primary" onclick="window.location.href='/database/StSocialMedias'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-columns-reverse" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 .5m4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10A.5.5 0 0 1 4 .5m-4 2A.5.5 0 0 1 .5 2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-4 2A.5.5 0 0 1 .5 4h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m-4 2A.5.5 0 0 1 .5 6h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5m-4 2A.5.5 0 0 1 .5 8h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5m-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5m-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    Till listan
+                </button>
+                <button type="button" class="btn btn-purple" onclick="window.location.href='/database/StSocialMedias/Edit?id=@Model.StSocialMedia.StSocialMediaId'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                    </svg>
+                    Redigera Sidan
+                </button>
+                <form method="post" asp-page-handler="Delete" asp-route-id="@Model.StSocialMedia.StSocialMediaId" onsubmit="return confirm('Är du säker på att du vill ta bort den här sociala medieposten?');" style="display:inline;">
+                    <button type="submit" class="btn btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 5h4a.5.5 0 0 1 .5.5V13a.5.5 0 0 1-1 0V6H6v7a.5.5 0 0 1-1 0V5.5z" />
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1-1V1.5A1.5 1.5 0 0 0 12 0H4a1.5 1.5 0 0 0-1.5 1.5V2a1 1 0 0 1-1 1H1v1h14V3h-.5zM4.118 4 4 4.059V13a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V4.059L11.882 4H4.118z" />
+                        </svg>
+                        Ta bort social media
+                    </button>
+                </form>
+            </div>
+            <hr class="mt-1 mb-2" />
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Namn:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" asp-for="StSocialMedia.StSocialMediaName" disabled placeholder="Ange socialt nätverk">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Förkortning:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" asp-for="StSocialMedia.StSocialMediaShort" disabled placeholder="Ange förkortning">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <label class="form-label mb-0">Status:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <select class="form-control" asp-for="StSocialMedia.StSocialMediaStatus" disabled>
+                            <option value="1">Inaktiv</option>
+                            <option value="2">Dold</option>
+                            <option value="3">Aktiv</option>
+                        </select>
+                        <span asp-validation-for="StSocialMedia.StSocialMediaStatus" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

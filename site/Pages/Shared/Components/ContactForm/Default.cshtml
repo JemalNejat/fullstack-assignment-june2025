@@ -1,0 +1,61 @@
+﻿<!-- contact form -->
+<div class="contact-area pb-100">
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="contact-img">
+                        <img src="~/assets/img/contact/01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-form">
+                        <div class="contact-form-header">
+                            <h2>Get In Touch</h2>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable
+                                content of a page randomised words which don't look even slightly when looking at its layout.
+                            </p>
+                        </div>
+                        <form method="post" action="/taxrio/assets/php/contact.php" id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="far fa-user-tie"></i></span>
+                                        <input type="text" class="form-control" name="name"
+                                               placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                                        <input type="email" class="form-control" name="email"
+                                               placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="far fa-pen"></i></span>
+                                <input type="text" class="form-control" name="subject"
+                                       placeholder="Your Subject" required>
+                            </div>
+                            <div class="input-group textarea">
+                                <span class="input-group-text"><i class="far fa-comment-lines"></i></span>
+                                <textarea name="message" cols="30" rows="5" class="form-control"
+                                          placeholder="Write Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="theme-btn">
+                                Send
+                                Message <i class="far fa-paper-plane"></i>
+                            </button>
+                            <div class="col-md-12 mt-3">
+                                <div class="form-messege text-success"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end contact form -->

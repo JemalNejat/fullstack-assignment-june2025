@@ -1,0 +1,82 @@
+﻿@using SITE.ITEGAMAX._4._0._2.App_Code;
+@using SITE.ITEGAMAX._4._0._2.Models;
+@{
+    string urlreqpath = Context.Request.Path;
+    ViewData["PAGE_URL_PATH_LOCATION_1"] = new Uri($"{Context.Request.Scheme}://{Context.Request.Host}").AbsoluteUri;
+    ViewData["PAGE_URL_PATH_LOCATION_2"] = new Uri($"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.Path}{Context.Request.QueryString}");
+    string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+    modSitePage? pageItem = null;
+    if (Context.Items["PageContent"] != null)
+    {
+        pageItem = (modSitePage)Context.Items["PageContent"]!;
+    }
+
+    string stritegmx = " : " + CLCompanySettings.COMPANY_SHORT_NAME;
+    string[] nocompanynamearr = CLCustAppsettings.NOT_COMPANYNAME_TILTE!.Split(',');
+
+    foreach (var item in nocompanynamearr)
+    {
+        if (Context.Request.Path == item)
+        {
+            stritegmx = "";
+        }
+    }
+
+    if (!string.IsNullOrEmpty(pageItem?.pagetitle))
+        ViewData["PageTitle"] = pageItem.pagetitle + stritegmx;
+    else
+        ViewData["PageTitle"] = pageItem?.SiteMetaTags?.metatitle;
+
+    if ((ViewData["PageTitle"] == null) || (String.IsNullOrEmpty(ViewData["PageTitle"]!.ToString())))
+    {
+        ViewData["PageTitle"] = urlreqpath.Replace("/", " - ") + " : ITeGAMAX";
+    }
+
+    if (!string.IsNullOrEmpty(pageItem?.pageshortdescription))
+        ViewData["PageDescription"] = pageItem.pageshortdescription;
+    else
+        ViewData["PageDescription"] = pageItem?.SiteMetaTags?.metadescription;
+
+    if (!string.IsNullOrEmpty(pageItem?.pagetopbannerpic))
+        ViewData["PageImage"] = imagespagedir + "/" + pageItem.pageurlid!.Replace("/", "") + "/" + pageItem.pagetopbannerpic;
+    else
+        ViewData["PageImage"] = ViewData["PAGE_URL_PATH_LOCATION_1"] + pageItem?.SiteMetaTags?.metapropertyog_image;
+
+
+    ViewData["PageCanonical"] = ViewData["PAGE_URL_PATH_LOCATION_2"];
+    ViewData["PageAuthor"] = pageItem?.SiteMetaTags?.metaauthor;
+    ViewData["PageRobots"] = pageItem?.SiteMetaTags?.metanamerobots;
+    ViewData["PageType"] = pageItem?.SiteMetaTags?.metapropertyog_type;
+    ViewData["PageSiteName"] = pageItem?.SiteMetaTags?.metapropertyog_site_name;
+    ViewData["PageLocale"] = pageItem?.SiteMetaTags?.metapropertyog_locale;
+    ViewData["PageCreator"] = pageItem?.SiteMetaTags?.metapropertytwitter_creator;
+    ViewData["RequestPagePath"] = urlreqpath;
+}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>@ViewData["PageTitle"]</title>
+<link rel="icon" type="image/x-icon" href="~/site_imgs/itegamax-logo-icon.png">
+@{
+
+    if ((ViewData["PageDescription"] != null) && (!String.IsNullOrEmpty(ViewData["PageDescription"]!.ToString())))
+    {
+        <meta name="description" content="@ViewData["PageDescription"]" />
+    }
+}
+<link rel="canonical" href="@ViewData["PageCanonical"]" />
+<meta name="author" content="@ViewData["PageAuthor"]" />
+<meta name="robots" content="@ViewData["PageRobots"]" />
+<meta property="og:type" content="@ViewData["PageType"]" />
+<meta property="og:title" content="@ViewData["PageTitle"]" />
+<meta property="og:description" content="@ViewData["PageDescription"]" />
+<meta property="og:image" content="@ViewData["PageImage"]" />
+<meta property="og:url" content="@ViewData["PageCanonical"]" />
+<meta property="og:site_name" content="@ViewData["PageSiteName"]" />
+<meta property="og:locale" content="@ViewData["PageLocale"]" />
+<meta property="twitter:title" content="@ViewData["PageTitle"]" />
+<meta property="twitter:description" content="@ViewData["PageDescription"]" />
+<meta property="twitter:image" content="@ViewData["PageImage"]" />
+<meta property="twitter:site" content="@ViewData["PageSiteName"]" />
+<meta property="twitter:creator" content="@ViewData["PageCreator"]" />

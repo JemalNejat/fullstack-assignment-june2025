@@ -1,0 +1,158 @@
+﻿@page
+@model ADMIN.ITEGAMAX._4._0.Areas.database.Pages.SitePages.NewModel
+@{
+    Layout = "_LayoutCore";
+}
+<!-- Page Header -->
+<div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+    <div>
+        <h4 class="mb-0">Datatabell: @ViewData["Title"]</h4>
+        <p class="mb-0 text-muted">Den här sidan används för att lägga till en ny webbsida.</p>
+    </div>
+    <p>
+        <a asp-page="Index" class="btn btn-success waves-effect waves-light">Tillbaka</a>
+    </p>
+</div>
+
+<div class="col-xl-3 col-lg-7 w-100">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex flex-column">
+                <h5 class="mb-0 main-content-label">Lägg till ny webbsida</h5>
+                <hr class="mt-2 mb-4" />
+            </div>
+
+            <form class="form-horizontal" method="post">
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Sidtitel:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="NewPage.Pagetitle" required placeholder="Ange sidtitel">
+                            <span asp-validation-for="NewPage.Pagetitle" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Sidsubtitel:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="NewPage.Pagesubtitle" required placeholder="Ange sidsubtitel">
+                            <span asp-validation-for="NewPage.Pagesubtitle" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Sid kortbeskrivning:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea data-val-maxlength-max="2000" asp-for="NewPage.Pageshortdescription" class="form-control" rows="3" placeholder="Ange sid kort beskrivning"></textarea>
+                            <span asp-validation-for="NewPage.Pagetitle" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Område:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="NewPage.Pagemenuarea" required placeholder="Ange område">
+                            <span asp-validation-for="NewPage.Pagemenuarea" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Underrubrik:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="NewPage.Pagesubtitle" placeholder="Ange underrubrik">
+                            <span asp-validation-for="NewPage.Pagesubtitle" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Toppbannerbild:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="NewPage.Pagetopbannerpic" placeholder="Ange toppbannerbild">
+                            <span asp-validation-for="NewPage.Pagetopbannerpic" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Mediumbannerbild:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="NewPage.Pagemediumbannerpic" placeholder="Ange mediumbannerbild">
+                            <span asp-validation-for="NewPage.Pagemediumbannerpic" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">URL-sökväg:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="NewPage.Pageurlid" required placeholder="Ange URL">
+                            <span asp-validation-for="NewPage.Pageurlid" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Typ:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" asp-for="NewPage.Pagetype" required placeholder="Ange typ">
+                            <span asp-validation-for="NewPage.Pagetype" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-2 d-flex align-items-center">
+                            <label class="form-label mb-0">Status:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <select class="form-control" asp-for="NewPage.Pagestatus">
+                                <option value="1">Inaktiv</option>
+                                <option value="2">Dold</option>
+                                <option value="3">Aktiv</option>
+                            </select>
+                            <span asp-validation-for="NewPage.Pagestatus" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer pb-0">
+                    <input type="submit" class="btn btn-primary waves-effect waves-light" value="Lägg till" />
+                </div>
+                <input type="hidden" asp-for="NewPage.Pagecreateddate" value="@DateTime.Now" />
+                <input type="hidden" asp-for="NewPage.Viewcount" value="0" />
+                <input asp-for="NewPage.Pagemodifieddate" type="hidden" value="@DateTime.Now" />
+                <input asp-for="NewPage.Pageupdateddate" type="hidden" value="@DateTime.Now" />
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

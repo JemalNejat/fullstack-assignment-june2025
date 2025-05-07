@@ -1,0 +1,82 @@
+﻿@{
+    if (Model != null)
+    {
+        modSitePage smallpage = Model;
+        string pagetopbanner;
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+
+        if (!String.IsNullOrEmpty(Model?.pagetopbannerpic))
+        {
+            pagetopbanner = imagespagedir + "/" + Model?.pageurlid.Replace("/", "") + "/" + Model?.pagetopbannerpic!;
+        }
+        else
+        {
+            pagetopbanner = "/assets/img/quote/01.jpg";
+        }
+
+        <!-- service quote-area -->
+        <div class="quote-area" style="background: url('@pagetopbanner')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 ms-auto">
+                        <div class="quote-content">
+                            <div class="quote-head">
+                                <h3>@smallpage.pagesubtitle</h3>
+                                <p>
+                                    @smallpage.pageshortdescription
+                                </p>
+                            </div>
+                            <div class="quote-form">
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="far fa-user-tie"></i></span>
+                                                <input type="text" class="form-control" placeholder="Your Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                                                <input type="email" class="form-control" placeholder="Your Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="far fa-phone"></i></span>
+                                                <input type="text" class="form-control" placeholder="Your Phone">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="far fa-box"></i></span>
+                                                <select class="select form-select form-control">
+                                                    <option value="">Choose Service</option>
+                                                    <option value="1">Tax Planning</option>
+                                                    <option value="2">Personal Tax</option>
+                                                    <option value="3">Insurance Tax</option>
+                                                    <option value="4">Corporate Tax</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="input-group textarea">
+                                                <span class="input-group-text"><i class="far fa-comment-lines"></i></span>
+                                                <textarea class="form-control" cols="30" rows="4"
+                                                          placeholder="Your Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <button type="submit" class="theme-btn">Submit Now<i class="fas fa-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- service quote-area end -->
+    }
+}

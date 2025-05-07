@@ -1,0 +1,70 @@
+﻿@{
+
+    if (Model != null)
+    {
+        string imagespagedir = CLCustAppsettings.IMAGE_PAGES_PATH!;
+        modSitePage sitepage = Model;
+        <!-- hero area -->
+        <div class="hero-section hs-1">
+            <div class="hero-single">
+                <div class="hero-shape">
+                    <img src="~/assets/img/shape/02.png" alt="">
+                </div>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="hero-content">
+                                @{
+                                    if (!string.IsNullOrEmpty(sitepage.pagesubtitle))
+                                    {
+                                        <h6 class="hero-sub-title wow fadeInDown" data-wow-delay=".25s"><i class="fas fa-percent"></i>@sitepage.pagesubtitle</h6>
+                                    }
+                                    if (!string.IsNullOrEmpty(sitepage.pagetitle))
+                                    {
+                                        <h1 class="hero-title" data-animation="fadeInRight" data-delay=".50s">
+                                            @sitepage.pagetitle
+                                        </h1>
+                                    }
+                                    if (!string.IsNullOrEmpty(sitepage.pageshortdescription))
+                                    {
+                                        <p data-animation="fadeInLeft" data-delay=".75s">
+                                            @Html.Raw(sitepage.pageshortdescription)
+                                        </p>
+                                    }
+
+                                }
+                                <div class="hero-btn wow fadeInUp" data-wow-delay="1s">
+                                    <a href="~/services" class="theme-btn">
+                                        @Resources.mainstrings.strourservices<i class="fas fa-arrow-right"></i>
+                                    </a>
+                                    <a href="~/produkter" class="theme-btn theme-btn2">
+                                        @Resources.mainstrings.strourproducts<i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hero-social pa-1 mt-50 wow fadeInUp" data-wow-delay="1.25s">
+                                <h5>@Resources.mainstrings.strfollowus</h5>
+                                <br />
+                                <div class="social">
+                                    <a href="@CLCompanySettings.FOLLOWUS_FACEBOOK" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                                    <a href="@CLCompanySettings.FOLLOWUS_XTWITTER" target="_blank"><i class="fab fa-x-twitter"> </i> (Twitter)</a>
+                                    <a href="@CLCompanySettings.FOLLOWUS_GOOGLE" target="_blank"><i class="fab fa-google"> </i> Google</a>
+                                    <a href="@CLCompanySettings.FOLLOWUS_LINKEDIN" target="_blank"><i class="fab fa-linkedin"> </i> Linkedin</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="hero-img-wrap">
+                                <div class="hero-img">
+                                    <img id="theImageSlide" imagedata="1,2,3,4,5,6" imagepath="/site_imgs/om-itegamax/" src="/site_imgs/om-itegamax/1.png" alt="@sitepage.pagetitle" style="height: auto; width: 100%; max-height: 100%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- hero area end -->
+    }
+}
+

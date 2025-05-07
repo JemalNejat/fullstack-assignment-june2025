@@ -1,0 +1,23 @@
+﻿@{
+    if (Model != null)
+    {
+        List<modMenuItem> listmenuitems_under = Model;
+
+        <div class="footer-widget-box list">
+            <h4 class="footer-widget-title">@Resources.mainstrings.strservices</h4>
+            <ul class="footer-list">
+                @{
+                    foreach (var item in listmenuitems_under)
+                    {
+                        if (item.pagetype != 1)
+                        {
+                            <li><a href="@item.pageurlid"><i class="far fa-arrow-right"></i>@item.pagetitle</a></li>
+                        }
+                    }
+                }
+
+            </ul>
+        </div>
+
+    }
+}

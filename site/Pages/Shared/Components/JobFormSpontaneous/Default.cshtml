@@ -1,0 +1,101 @@
+﻿<div class="contact-wrapper">
+    <div class="row g-4">
+     
+        <div class="col-lg-12">
+            <div class="contact-form">
+                @{
+                    if (Model != null)
+                    {
+                        modSitePage shortpage = Model;
+
+                        <div class="contact-form-header">
+                            <h2>@shortpage.pagesubtitle</h2>
+                            <p>
+                               @Html.Raw(shortpage.pageshortdescription)
+                            </p>
+                        </div>
+                    }
+                }
+                <form method="post" action="/" id="contact-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="far fa-user-tie"></i></span>
+                                <input type="text" class="form-control" name="name"
+                                       placeholder="Förnamn" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                                <input type="text" class="form-control" name="email"
+                                       placeholder="Efternamn" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                                <input type="email" class="form-control" name="email"
+                                       placeholder="E-postadress" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="far fa-user-tie"></i></span>
+                                <input type="text" class="form-control" name="name"
+                                       placeholder="Telefonnummer" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="far fa-pen"></i></span>
+                        <input type="text" class="form-control" name="subject"
+                               placeholder="Roll du ansöker om" required>
+                    </div>
+                    <div class="row">
+                    <span>Skriv en kort introduktion eller motivering till tjänsten</span>
+                    <br />
+                    <div class="input-group textarea">
+                        
+                        <span class="input-group-text"><i class="far fa-comment-lines"></i></span>
+                        <textarea name="message" cols="30" rows="5" class="form-control"
+                                  placeholder="Personligt Meddelande (Valfritt)"></textarea>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="input-group textarea">
+                    Ladda upp CV
+
+                    Bifoga CV som PDF eller Word-dokument.
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="input-group textarea">
+                        Bifoga andra dokument (Valfritt)
+
+                        ladda upp ytterligare filer, som personliga brev, arbetsprover eller certifikat.
+                    </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="far fa-pen"></i></span>
+                        <input type="text" class="form-control" name="subject"
+                               placeholder="LinkedIn-profil (Valfritt)" required>
+                    </div>
+                    <hr />
+                    Fält för samtycke
+
+                    En checkbox där sökanden samtycker till att deras data används i enlighet med företagets integritetspolicy.
+                    <hr />
+                    <button type="submit" class="theme-btn">
+                        Skicka in spontanansökan <i class="far fa-paper-plane"></i>
+                    </button>
+                    <div class="col-md-12 mt-3">
+                        <div class="form-messege text-success"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

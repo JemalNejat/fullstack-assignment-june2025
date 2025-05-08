@@ -90,18 +90,29 @@ In `SITE.ITEGAMAX.4.0.2`, custom middleware is used to enhance request processin
    ```bash
    dotnet run --project ADMIN.ITEGAMAX.4.0
    dotnet run --project SITE.ITEGAMAX.4.0.2
-   ```
+
+
+
+
+````markdown
+3. Update `appsettings.json` with your local database credentials.
+4. Run each project individually using:
+
+   ```bash
+   dotnet run --project ADMIN.ITEGAMAX.4.0
+   dotnet run --project SITE.ITEGAMAX.4.0.2
+````
 
 ---
 
 ## 📝 Notes from LIA with Itegamax
 
-During our LIA (Lärande i Arbete) period at **Itegamax**, we accessed and worked on the project using personalized connection strings. The company granted access based on each student's IP address, allowing us to work both from the office and remotely.
+During my LIA (Lärande i Arbete) period at **Itegamax**, I worked on this project using a personalized connection string. The company granted access based on my IP address, which allowed me to work both from the office and remotely.
 
-The code in this submission represents what was actively developed and tested during that time. However, it's important to note the following:
+The code in this submission reflects what I developed and tested during that time. However, it's important to highlight the following:
 
-* 🔒 **Access Limitation**: Since our internship has ended, the original connection strings no longer work. This means the project cannot currently connect to the live database setup we used during development.
-* ⚠️ **Potential Runtime Issues**: You may encounter errors when trying to run the application locally, especially if the database connection is not reconfigured. These issues stem from deployment and configuration challenges that occurred during our time at the company and may still persist in the current version.
+* 🔒 **Access Limitation**: Since my internship has ended, the original connection string no longer works. This means the project cannot currently connect to the live database environment used during development.
+* ⚠️ **Potential Runtime Issues**: You may encounter errors when trying to run the application locally, especially if the database connection is not reconfigured. These issues are related to deployment and configuration challenges that occurred during my time at the company.
 
 I recommend updating the connection string in `appsettings.json` with your own local or test database if you wish to run the project.
 

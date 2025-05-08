@@ -39,61 +39,13 @@ Both projects load structured configuration sections via the `builder.Configurat
 - `COMPANYSETTINGS` for business-specific preferences.
 - `ConnectionStrings` for database access.
 
-Services are registered using `builder.Services`, including:
-- 📝 Razor Pages
-- 🛢️ Database context: `ITeGAMAX4Context`
-- 🗂️ Session services (in `SITE`)
-- 🌍 Localization options
-
----
-
-## 🗄️ Database Integration
-
-Entity Framework Core is used for ORM, connected to a MariaDB instance via a `MariaDbConnectionString`.
-
-The `ADMIN` project includes a scaffolded database context (`Scaffold-DB.txt`) indicating model-first or reverse-engineering of the database.
-
----
-
-## 🌐 Middleware and Localization
-
-In `SITE.ITEGAMAX.4.0.2`, custom middleware is used to enhance request processing. This includes:
-- 🌍 **Localization Middleware**: Supporting multiple cultures using `RequestLocalizationOptions`.
-- 🗂️ **Session Middleware**: Enables stateful user interactions across requests.
-
----
-
-## ⚠️ Challenges Encountered
-
-- 🌍 **Multi-language Support**: Implementing culture-aware responses and ensuring translations are applied correctly.
-- 🔄 **Cross-project Configuration**: Managing shared settings while maintaining separation between admin and site modules.
-- 🧩 **Database Context Consistency**: Ensuring model synchronization during scaffold/regeneration steps.
-
----
-
-## 🚀 How to Run
-
-### 📋 Prerequisites
-- [.NET SDK 7.0 or higher](https://dotnet.microsoft.com/)
-- [MySQL or MariaDB server](https://mariadb.org/)
-
-### 🛠️ Steps
-1. Clone the repository and extract both projects.
-2. Restore dependencies:
-   ```bash
-   dotnet restore
-   Absolutely! Here's the enhanced version of your `Documentation.md` with relevant **emoji icons** for each section to improve clarity and engagement:
-
----
-
-````markdown
 # 📘 Project Documentation: ITeGAMAX 4.0 Platform
 
 ## 🔍 Overview
 
 This platform is composed of two distinct ASP.NET Core applications:
 - **ADMIN.ITEGAMAX.4.0** – A back-office administration panel used for internal management.
-- **SITE.ITEGAMAX.4.0.2** – The public-facing site designed for end-users.
+- **SITE.ITEGAMAX.4.0.2** – The public-facing site is designed for end-users.
 
 Both applications are built with ASP.NET Core Razor Pages and share a common design philosophy and data access strategy using Entity Framework Core and MySQL.
 

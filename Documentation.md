@@ -1,4 +1,3 @@
-```markdown
 # 📘 Project Documentation: ITeGAMAX 4.0 Platform
 
 ## 🔍 Overview
@@ -104,9 +103,6 @@ The code in this submission represents what was actively developed and tested du
 * 🔒 **Access Limitation**: Since our internship has ended, the original connection strings no longer work. This means the project cannot currently connect to the live database setup we used during development.
 * ⚠️ **Potential Runtime Issues**: You may encounter errors when trying to run the application locally, especially if the database connection is not reconfigured. These issues stem from deployment and configuration challenges that occurred during our time at the company and may still persist in the current version.
 
-We recommend updating the connection string in `appsettings.json` with your own local or test database if you wish to run the project.
-
-```
+I recommend updating the connection string in `appsettings.json` with your own local or test database if you wish to run the project.
 
 
-```

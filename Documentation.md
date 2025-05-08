@@ -1,3 +1,4 @@
+```markdown
 # 📘 Project Documentation: ITeGAMAX 4.0 Platform
 
 ## 🔍 Overview
@@ -105,5 +106,7 @@ The code in this submission represents what was actively developed and tested du
 
 We recommend updating the connection string in `appsettings.json` with your own local or test database if you wish to run the project.
 
+```
 
 
+```

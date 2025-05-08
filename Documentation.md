@@ -1,5 +1,3 @@
-
-````markdown
 # 📘 Project Documentation: ITeGAMAX 4.0 Platform
 
 ## 🔍 Overview

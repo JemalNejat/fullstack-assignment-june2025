@@ -82,7 +82,7 @@ In `SITE.ITEGAMAX.4.0.2`, custom middleware is used to enhance request processin
 2. Restore dependencies:
    ```bash
    dotnet restore
-````
+
 
 3. Update `appsettings.json` with your local database credentials.
 4. Run each project individually using:
@@ -90,7 +90,7 @@ In `SITE.ITEGAMAX.4.0.2`, custom middleware is used to enhance request processin
    ```bash
    dotnet run --project ADMIN.ITEGAMAX.4.0
    dotnet run --project SITE.ITEGAMAX.4.0.2
-````
+
 
 ---
 

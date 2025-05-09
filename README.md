@@ -9,9 +9,9 @@
 
 ### 🚀 Project Overview
 
-This project transforms a previously static website into a fully dynamic, database-driven web application using **ASP.NET Core MVC**, **Entity Framework Core**, and **MySQL**. It was developed during an internship at **Itegamax AB** to meet real-world needs for scalable, flexible, and easily maintainable web platforms.
+This project converts a static website into a dynamic, database-driven application using **ASP.NET Core MVC**, **Entity Framework Core**, and **MySQL**. It was built during an internship at **Itegamax AB** to address real business needs for content flexibility and maintainability.
 
-The system allows non-technical administrators to manage content such as services, articles, and projects through an intuitive Admin Panel. The site is fully responsive and optimized for performance and usability.
+The system includes a user-friendly Admin Panel for managing services, articles, and projects. The site is fully responsive and optimized for performance.
 
 ---
 
@@ -30,11 +30,11 @@ The system allows non-technical administrators to manage content such as service
 
 ### 🏗️ Architecture
 
-* **MVC Pattern**: Clean separation between data, views, and logic.
-* **Admin Panel**: Dynamic management of articles, services, and projects.
-* **EF Core Migrations**: Code-first approach for syncing models with the database.
-* **CDN Integration**: Media content is served via CDN for optimal load time.
-* **Docker-ready**: Configured for containerized deployment environments.
+* **MVC Pattern** for clear separation of concerns
+* **Admin Panel** for content management
+* **EF Core Migrations** with a code-first approach
+* **CDN** for media delivery
+* **Docker-ready** for container deployment
 
 ---
 
@@ -56,8 +56,9 @@ The system allows non-technical administrators to manage content such as service
    cd fullstack-assignment-june2025
    ```
 
-2. **Configure Database Connection**
-   In `appsettings.json`, replace with your own connection string:
+2. **Configure the Database Connection**
+
+   Edit `appsettings.json` with your connection details:
 
    ```json
    "ConnectionStrings": {
@@ -66,14 +67,16 @@ The system allows non-technical administrators to manage content such as service
    ```
 
 3. **Apply Migrations**
-   Run in the **Package Manager Console**:
+
+   In the Package Manager Console:
 
    ```powershell
    Update-Database
    ```
 
-4. **Run the application**
-   Press `F5` in Visual Studio or:
+4. **Run the Application**
+
+   Press `F5` in Visual Studio or use:
 
    ```bash
    dotnet run
@@ -81,19 +84,22 @@ The system allows non-technical administrators to manage content such as service
 
 ---
 
-## Database Access Requirements
+## 🔐 Database Access Requirements
 
-This project uses a MySQL server that is managed by the company. To connect to it, your **IPv4 address must be whitelisted**. If it's not, you'll get this error:
+This project connects to a **private MySQL server** hosted by **Itegamax AB**.
+
+* The server is **not publicly accessible**.
+* To connect, your **IPv4 address must be manually whitelisted by a server admin**.
+* This setup is restricted to **Itegamax employees and approved LIA (internship) students only**.
+* Even if you provide your IPv4 address, access **will not be granted** unless you're part of the company or officially enrolled in their LIA program.
+
+If your IP is not whitelisted, you’ll see the error:
 
 ```
 Host 'your-ip' is not allowed to connect to this MySQL server
 ```
 
-Access to the database is restricted. **Only company employees or LIA students** can be granted access during their internship period. The server is not publicly accessible, and **only the company's internal admins** have permission to approve IP addresses.
-
-> If you're not part of the company or an authorized intern, you won't be able to connect to the database—even if you provide your IPv4 address.
-
-
+> Only internal admins at Itegamax can approve access. This restriction is in place for security and compliance reasons.
 
 ---
 
@@ -108,12 +114,12 @@ Access to the database is restricted. **Only company employees or LIA students**
 
 ### 🧪 Features Implemented
 
-* Admin dashboard for article/service/project CRUD
-* Responsive layout (Bootstrap 5)
-* CDN for image loading
-* EF Core with MySQL
-* Modular Razor Components
-* Role-based content visibility *(basic setup)*
+* Admin dashboard for managing articles, services, and projects
+* Fully responsive frontend (Bootstrap 5)
+* CDN for fast image loading
+* EF Core integration with MySQL
+* Component-based Razor structure
+* Basic role-based content visibility
 
 ---
 
@@ -123,7 +129,7 @@ Access to the database is restricted. **Only company employees or LIA students**
 | ------------------- | --------------- | ---------------- | ---------------- |
 | Page Load Time      | \~3.5s          | \~1.2s           | \~65% faster     |
 | Content Update Time | 1–2 days        | \~15 mins        | >90% faster      |
-| Mobile Support      | Limited         | Full responsive  | Greatly improved |
+| Mobile Support      | Limited         | Fully responsive | Greatly improved |
 
 ---
 
@@ -145,6 +151,5 @@ Access to the database is restricted. **Only company employees or LIA students**
 
 ✔️ MVP Complete
 ✔️ Tested by internal team
-🚧 Future features like chatbot and RBAC in pipeline
-
+🚧 Future features like chatbot and RBAC in development
 

@@ -78,6 +78,34 @@ The system allows non-technical administrators to manage content such as service
    ```bash
    dotnet run
    ```
+## Database Access Requirements
+
+To connect to the MySQL database, your **IPv4 address** must be whitelisted on the server.
+Without this, the server will block your connection, and you will encounter a `Host is not allowed to connect to this MySQL server` error.
+
+**Why this is necessary:**
+MySQL restricts access to its server based on the IP address of the client attempting to connect. This is a security measure to prevent unauthorized access. By whitelisting your **IPv4 address**, you’re allowing your system to establish a secure connection to the database.
+
+### Steps to gain access:
+
+1. **Provide your IPv4 address:**
+   To be granted permission, each user must submit their **IPv4 address**.
+
+2. **Whitelisting Process:**
+   After receiving your IPv4 address, an administrator will whitelist it in the MySQL server configuration.
+
+3. **Access Granted:**
+   Once whitelisted, you’ll be able to connect to the database without issues. If your IPv4 address changes, you will need to submit the new address to ensure continuous access.
+
+### Common Error:
+
+If your IP address is not whitelisted, you'll encounter the error:
+
+```
+Host 'your-ip-address' is not allowed to connect to this MySQL server
+```
+
+By following the steps above and ensuring your IP address is whitelisted, you’ll be able to connect to the MySQL database and proceed with your work.
 
 ---
 

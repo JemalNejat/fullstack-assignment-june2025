@@ -80,32 +80,23 @@ The system allows non-technical administrators to manage content such as service
    ```
 ## Database Access Requirements
 
-To connect to the MySQL database, your **IPv4 address** must be whitelisted on the server.
-Without this, the server will block your connection, and you will encounter a `Host is not allowed to connect to this MySQL server` error.
+Sure! Here's a clear and concise version of the message you can include:
 
-**Why this is necessary:**
-MySQL restricts access to its server based on the IP address of the client attempting to connect. This is a security measure to prevent unauthorized access. By whitelisting your **IPv4 address**, you’re allowing your system to establish a secure connection to the database.
+---
 
-### Steps to gain access:
+## Database Access Requirements
 
-1. **Provide your IPv4 address:**
-   To be granted permission, each user must submit their **IPv4 address**.
-
-2. **Whitelisting Process:**
-   After receiving your IPv4 address, an administrator will whitelist it in the MySQL server configuration.
-
-3. **Access Granted:**
-   Once whitelisted, you’ll be able to connect to the database without issues. If your IPv4 address changes, you will need to submit the new address to ensure continuous access.
-
-### Common Error:
-
-If your IP address is not whitelisted, you'll encounter the error:
+This project uses a MySQL server that is managed by the company. To connect to it, your **IPv4 address must be whitelisted**. If it's not, you'll get this error:
 
 ```
-Host 'your-ip-address' is not allowed to connect to this MySQL server
+Host 'your-ip' is not allowed to connect to this MySQL server
 ```
 
-By following the steps above and ensuring your IP address is whitelisted, you’ll be able to connect to the MySQL database and proceed with your work.
+Access to the database is restricted. **Only company employees or LIA students** can be granted access during their internship period. The server is not publicly accessible, and **only the company's internal admins** have permission to approve IP addresses.
+
+> If you're not part of the company or an authorized intern, you won't be able to connect to the database—even if you provide your IPv4 address.
+
+
 
 ---
 

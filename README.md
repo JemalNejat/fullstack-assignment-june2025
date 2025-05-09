@@ -78,9 +78,6 @@ The system allows non-technical administrators to manage content such as service
    ```bash
    dotnet run
    ```
-## Database Access Requirements
-
-Sure! Here's a clear and concise version of the message you can include:
 
 ---
 

@@ -1,10 +1,12 @@
 
-# 📚 Fullstack Assignment – June 2025
+📚 Fullstack Assignment – June 2025  
+Author: Nejat Jemal  
+School: Chas Academy  
+Repository: fullstack-assignment-june2025  
+Live URL: ([itegamax](https://itegamax.se/))
 
-**Author:** Nejat Jemal  
-**School:** Chas Academy  
-**Repository:** [fullstack-assignment-june2025](https://github.com/chas-academy/fullstack-assignment-june2025)  
-**Live URL:** [itegamax](https://itegamax.se/)
+
+
 
 ---
 

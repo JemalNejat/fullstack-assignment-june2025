@@ -16,6 +16,7 @@ All applications are built with ASP.NET Core Razor Pages and share a common desi
 The system is divided into two separate applications to enforce the separation of concerns:
 - The **Admin** application focuses on content, settings, and user management.
 - The **Site** application delivers dynamic content, localized views, and user session handling.
+- The **CDN.ITEGAMAX.4.0** application handles media uploads and serves static content through a globally distributed Content Delivery Network (CDN), improving performance and scalability.
 
 Each project initializes its own middleware, services, and Razor Pages independently via the `Program.cs` file.
 
@@ -35,7 +36,7 @@ Each project initializes its own middleware, services, and Razor Pages independe
 
 ## ⚙️ Configuration and Dependency Injection
 
-Both projects load structured configuration sections via the `builder.Configuration.GetSection(...).Bind(...)` pattern. These include:
+All projects load structured configuration sections via the `builder.Configuration.GetSection(...).Bind(...)` pattern. These include:
 - `CUSTAPPSETTINGS` for custom app configurations.
 - `COMPANYSETTINGS` for business-specific preferences.
 - `ConnectionStrings` for database access.
@@ -114,8 +115,9 @@ This setup aligns with modern web development best practices and contributes to 
 4. Run each project individually using:
 
    ```bash
-   dotnet run --project ADMIN.ITEGAMAX.4.0
-   dotnet run --project SITE.ITEGAMAX.4.0.2
+   dotnet run --project CDN.ITEGAMAX.4.0
+   dotnet run --project admin
+   dotnet run --project site
 
 
 ---
@@ -129,5 +131,6 @@ The code in this submission reflects what I developed and tested during that tim
 * 🔒 **Access Limitation**: Since my internship has ended, the original connection string no longer works. This means the project cannot currently connect to the live database environment used during development.
 * ⚠️ **Potential Runtime Issues**: You may encounter errors when trying to run the application locally, especially if the database connection is not reconfigured. These issues are related to deployment and configuration challenges that occurred during my time at the company.
 
-I recommend updating the connection string in `appsettings.json` with your own local or test database if you wish to run the project.
+💡 Tip: Update the connection string in appsettings.json with your own local or test database to run the project successfully.
+🔒 Note: The original MariaDB instance used during development was hosted by Itegamax AB and required IP whitelisting for access. Since this access is no longer available, you will need to set up your own local or cloud-based database environment to run the application.
 

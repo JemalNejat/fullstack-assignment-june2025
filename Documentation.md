@@ -22,6 +22,22 @@ The ITeGAMAX 4.0 platform is composed of three independent ASP.NET Core projects
 Each project is self-contained and initializes its own middleware, services, and Razor Pages independently through its respective Program.cs file. This modular design enforces a clear separation of concerns and allows each application to evolve independently while sharing a consistent development approach.
 
 ---
+## 🧱 MVC Architecture 
+The ITeGAMAX 4.0 platform follows the Model-View-Controller (MVC) architectural pattern, which separates concerns across three core components:
+
+- **Models** – Define the structure of the data used in the application, such as Article, Service, and Project. These classes represent the database schema and are managed through Entity Framework Core.
+
+- **Controllers** – Handle incoming HTTP requests, process user input, and contain the core business logic. For example, HomeController manages file uploads and routing for the public site.
+
+- **Views** – Razor Pages that generate the HTML content users interact with. These are dynamically rendered based on the data provided by the controllers.
+
+- **Data Layer** – The application uses ApplicationDbContext (or ITeGAMAX4Context) to interact with the database. This context is configured using Entity Framework Core and connects to a MySQL/MariaDB backend.
+
+This architecture promotes maintainability, scalability, and a clean separation of responsibilities across the codebase.
+
+---
+
+
 
 ## 🧰 Technologies Used
 
@@ -50,11 +66,23 @@ Services are registered using `builder.Services`, including:
 
 ---
 
+
 ## 🗄️ Database Integration
 
-Entity Framework Core is used for ORM, connected to a MariaDB instance via a `MariaDbConnectionString`.
+The platform uses **Entity Framework Core** as its Object-Relational Mapper (ORM), connected to a **MariaDB** instance via a connection string defined in `appsettings.json`.
 
-The `ADMIN` project includes a scaffolded database context (`Scaffold-DB.txt`) indicating model-first or reverse-engineering of the database.
+```json
+"ConnectionStrings": {
+  "MariaDbConnectionString": "server=localhost;port=3306;database=your_db;user=your_user;password=your_password;"
+}
+```
+
+Each project reads this connection string at startup to configure the database context (`ITeGAMAX4Context` or `ApplicationDbContext`) using dependency injection.
+
+- The **Admin** project includes a scaffolded database context (`Scaffold-DB.txt`), indicating that the database schema was reverse-engineered from an existing MariaDB instance.
+- The original database was hosted by **Itegamax AB** and required IP whitelisting for access. Since this access is no longer available, users must configure their own local or cloud-based MariaDB instance to run the application.
+
+
 
 ---
 

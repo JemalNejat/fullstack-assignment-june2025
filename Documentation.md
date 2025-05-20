@@ -2,7 +2,7 @@
 
 ## 🔍 Overview
 
-This platform is composed of two distinct ASP.NET Core applications:
+This platform is composed of three distinct ASP.NET Core applications:
 - **admin** – A back-office administration panel used for internal management.
 - **site** – The public-facing site is designed for end-users.
 - **CDN.ITEGAMAX.4.0** – Media content is served via CDN for optimal load time.

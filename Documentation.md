@@ -13,12 +13,12 @@ All applications are built with ASP.NET Core Razor Pages and share a common desi
 
 ## 🏗️ Architecture
 
-The system is divided into two separate applications to enforce the separation of concerns:
-- The **Admin** application focuses on content, settings, and user management.
-- The **Site** application delivers dynamic content, localized views, and user session handling.
-- The **CDN.ITEGAMAX.4.0** application handles media uploads and serves static content through a globally distributed Content Delivery Network (CDN), improving performance and scalability.
+The ITeGAMAX 4.0 platform is composed of three independent ASP.NET Core projects, each following the Model-View-Controller (MVC) architectural pattern:
 
-Each project initializes its own middleware, services, and Razor Pages independently via the `Program.cs` file.
+**Admin** – A back-office application for managing content, settings, and users.
+**Site** – The public-facing application that delivers dynamic, localized content and handles user sessions.
+**CDN.ITEGAMAX.4.0** – A dedicated service for handling media uploads and serving static content via a globally distributed Content Delivery Network (CDN) to enhance performance and scalability.
+Each project is self-contained and initializes its own middleware, services, and Razor Pages independently through its respective Program.cs file. This modular design enforces a clear separation of concerns and allows each application to evolve independently while sharing a consistent development approach.
 
 ---
 

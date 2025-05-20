@@ -1,0 +1,353 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CDN.ITEGAMAX.4.0.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CDN.ITEGAMAX.4.0.ggrt6o3u73.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\foretagfilosofi\\itegamax_086cf95b-ae72-4d2f-8aa2-0af7a1ddd715.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\foretagfilosofi\\itegamax_086cf95b-ae72-4d2f-8aa2-0af7a1ddd715.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\foretagfilosofi\\itegamax_96db1751-3872-4292-8182-f5b73a7f4e32.png",
+      "PackagePath": "staticwebassets\\site_imgs\\foretagfilosofi\\itegamax_96db1751-3872-4292-8182-f5b73a7f4e32.png"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\foretagom-itegamax\\topbanner-om-itegamax.png",
+      "PackagePath": "staticwebassets\\site_imgs\\foretagom-itegamax\\topbanner-om-itegamax.png"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\foretagom-itegamax\\undertopbanner-om-itegamax.png",
+      "PackagePath": "staticwebassets\\site_imgs\\foretagom-itegamax\\undertopbanner-om-itegamax.png"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\foretagsa-jobbar-vi\\itegamax_1b2a37da-b20f-4184-a4b7-8eeddd516b5f.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\foretagsa-jobbar-vi\\itegamax_1b2a37da-b20f-4184-a4b7-8eeddd516b5f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\foretagsa-jobbar-vi\\itegamax_707193de-ac4d-47fd-8192-74c85c9d0fcc.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\foretagsa-jobbar-vi\\itegamax_707193de-ac4d-47fd-8192-74c85c9d0fcc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_30b6334e-ed77-4dda-924d-2891c2a84a56.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_30b6334e-ed77-4dda-924d-2891c2a84a56.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_55405adc-eb1f-4eea-92cc-da3dbe4b18d0.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_55405adc-eb1f-4eea-92cc-da3dbe4b18d0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_5a693811-da63-4e50-9846-4aec0863510a.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_5a693811-da63-4e50-9846-4aec0863510a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_8e2ca0f1-bf64-4800-8480-379651bb5061.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_8e2ca0f1-bf64-4800-8480-379651bb5061.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_a1a61c3c-77a2-400d-97b9-b1ee5de87b03.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_a1a61c3c-77a2-400d-97b9-b1ee5de87b03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_a2043c23-5ce3-44b0-9fe1-cbcbd1d70049.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_a2043c23-5ce3-44b0-9fe1-cbcbd1d70049.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_b623312f-a15c-4714-adf7-2c8a6d2b5ee1.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_b623312f-a15c-4714-adf7-2c8a6d2b5ee1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_ca9a60cf-fd89-4591-a818-2627cc08874e.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_ca9a60cf-fd89-4591-a818-2627cc08874e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_da29688d-3295-44b6-9655-b3a03ec39a03.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_da29688d-3295-44b6-9655-b3a03ec39a03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_ebf1dce5-d0d4-403f-af15-bfee8f5a6fe3.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_ebf1dce5-d0d4-403f-af15-bfee8f5a6fe3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\informationcookies\\itegamax_f556acf8-f471-4e0b-a249-03100dd32345.jpg",
+      "PackagePath": "staticwebassets\\site_imgs\\informationcookies\\itegamax_f556acf8-f471-4e0b-a249-03100dd32345.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\services\\itegamax_b68298f2-cb03-4c89-9754-16c3bd066d12.png",
+      "PackagePath": "staticwebassets\\site_imgs\\services\\itegamax_b68298f2-cb03-4c89-9754-16c3bd066d12.png"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\services\\itegamax_e454ef6d-edbf-4574-bcba-4f30e1f79f62.png",
+      "PackagePath": "staticwebassets\\site_imgs\\services\\itegamax_e454ef6d-edbf-4574-bcba-4f30e1f79f62.png"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\servicesit-arkitektur\\itegamax-it-arkitektur-600x400.png",
+      "PackagePath": "staticwebassets\\site_imgs\\servicesit-arkitektur\\itegamax-it-arkitektur-600x400.png"
+    },
+    {
+      "Id": "C:\\Users\\LenoYogaS730\\Source\\Repos\\ITeGAMAX.4.4\\CDN.ITEGAMAX.4.0\\wwwroot\\site_imgs\\serviceskonsultnatverk\\itegamax-it-consulting-network-600x400.png",
+      "PackagePath": "staticwebassets\\site_imgs\\serviceskonsultnatverk\\itegamax-it-consulting-network-600x400.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CDN.ITEGAMAX.4.0.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CDN.ITEGAMAX.4.0.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CDN.ITEGAMAX.4.0.props",
+      "PackagePath": "build\\CDN.ITEGAMAX.4.0.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CDN.ITEGAMAX.4.0.props",
+      "PackagePath": "buildMultiTargeting\\CDN.ITEGAMAX.4.0.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CDN.ITEGAMAX.4.0.props",
+      "PackagePath": "buildTransitive\\CDN.ITEGAMAX.4.0.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

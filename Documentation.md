@@ -78,9 +78,13 @@ When a user accesses the website, the CDN delivers these files from the server c
 **This approach offers several benefits**:
 
 ⚡ **Faster Load Times**: Users receive content more quickly, improving the overall experience.
+
 📉 **Reduced Server Load**: The main server handles fewer requests for static content, allowing it to focus on dynamic processing.
+
 🌍 **Global Reach**: Users from different regions experience consistent performance.
+
 🔁 **Improved Caching**: Frequently used libraries are often already cached in users’ browsers from other sites.
+
 This setup aligns with modern web development best practices and contributes to a smoother, more responsive experience for users worldwide.
 
 ---

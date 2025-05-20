@@ -5,6 +5,7 @@
 This platform is composed of two distinct ASP.NET Core applications:
 - **ADMIN.ITEGAMAX.4.0** – A back-office administration panel used for internal management.
 - **SITE.ITEGAMAX.4.0.2** – The public-facing site is designed for end-users.
+- **CDN Integration: Media content is served via CDN for optimal load time.
 
 Both applications are built with ASP.NET Core Razor Pages and share a common design philosophy and data access strategy using Entity Framework Core and MySQL.
 

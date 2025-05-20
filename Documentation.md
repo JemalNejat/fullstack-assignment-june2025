@@ -18,7 +18,7 @@ The ITeGAMAX 4.0 platform is composed of three independent ASP.NET Core projects
 - **Admin** – A back-office application for managing content, settings, and users.
 - **Site** – The public-facing application that delivers dynamic, localized content and handles user sessions.
 - **CDN.ITEGAMAX.4.0** – A dedicated service for handling media uploads and serving static content via a globally distributed Content Delivery Network (CDN) to enhance performance and scalability.
-- 
+ 
 Each project is self-contained and initializes its own middleware, services, and Razor Pages independently through its respective Program.cs file. This modular design enforces a clear separation of concerns and allows each application to evolve independently while sharing a consistent development approach.
 
 ---

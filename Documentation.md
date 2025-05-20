@@ -62,7 +62,7 @@ In `SITE.ITEGAMAX.4.0.2`, custom middleware is used to enhance request processin
 - 🗂️ **Session Middleware**: Enables stateful user interactions across requests.
 
 ---
-🌐 CDN Integration
+## 🌐 CDN Integration
 To enhance performance and reduce load times, the project utilizes a Content Delivery Network (CDN) for serving static assets such as:
 
 CSS frameworks (e.g., Bootstrap)
@@ -70,19 +70,20 @@ JavaScript libraries (e.g., jQuery, Popper.js)
 Fonts and icons (e.g., Google Fonts, Font Awesome)
 These resources are referenced via CDN links in the layout files of both the Admin and Site applications.
 
-🚀 How It Works
+## 🚀 How It Works
 Instead of sending images, files, and other static content directly from the main server every time someone visits the site, Azure CDN stores copies of these files on many servers located around the world.
 
 When a user accesses the website, the CDN delivers these files from the server closest to them geographically, which significantly improves loading speed because the data travels a shorter distance.
 
-This approach offers several benefits:
+**This approach offers several benefits**:
 
-⚡ Faster Load Times: Users receive content more quickly, improving the overall experience.
-📉 Reduced Server Load: The main server handles fewer requests for static content, allowing it to focus on dynamic processing.
-🌍 Global Reach: Users from different regions experience consistent performance.
-🔁 Improved Caching: Frequently used libraries are often already cached in users’ browsers from other sites.
+⚡ **Faster Load Times**: Users receive content more quickly, improving the overall experience.
+📉 **Reduced Server Load**: The main server handles fewer requests for static content, allowing it to focus on dynamic processing.
+🌍 **Global Reach**: Users from different regions experience consistent performance.
+🔁 **Improved Caching**: Frequently used libraries are often already cached in users’ browsers from other sites.
 This setup aligns with modern web development best practices and contributes to a smoother, more responsive experience for users worldwide.
 
+---
 ## ⚠️ Challenges Encountered
 
 - 🌍 **Multi-language Support**: Implementing culture-aware responses and ensuring translations are applied correctly.

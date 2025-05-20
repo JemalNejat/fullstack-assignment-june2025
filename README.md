@@ -1,5 +1,4 @@
 
-````markdown
 # 📚 Fullstack Assignment – June 2025
 
 **Author:** Nejat Jemal  
